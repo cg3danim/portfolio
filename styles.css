@@ -1,3 +1,4 @@
+/* ==== BASE STYLES ==== */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -7,19 +8,20 @@ body {
 
 .layout {
   display: flex;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
+/* ==== SIDEBAR ==== */
 .sidebar {
   width: 240px;
   background: #0d0d0d;
-  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem 1rem;
   position: fixed;
-  height: 100%;
+  height: 100vh;
+  justify-content: center; /* vertical centering */
 }
 
 .sidebar .logo {
@@ -27,30 +29,37 @@ body {
   margin-bottom: 3rem;
 }
 
-.sidebar nav {
+.menu {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
+  text-align: center;
 }
 
-.sidebar nav a {
+.menu a {
   color: #aaa;
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s ease;
+  font-weight: normal;
+  transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
-.sidebar nav a:hover {
+.menu a.active {
+  color: #f90;
+  font-weight: bold;
+}
+
+.menu a:hover {
   color: #f90;
 }
 
+/* ==== MAIN CONTENT ==== */
 .main-content {
   margin-left: 240px;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  height: 100vh;
   width: calc(100% - 240px);
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .full-section {
@@ -59,7 +68,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 .section-content {
@@ -67,19 +75,28 @@ body {
   text-align: center;
 }
 
+/* ==== WORK VIDEO SLIDER ==== */
+.video-slider-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 .video-slider {
   display: flex;
   transition: transform 0.5s ease;
-  height: 100vh;
 }
 
 .video-slider video {
-  width: 100vw;
+  width: calc(100vw - 240px);
   height: 100vh;
   object-fit: cover;
   flex-shrink: 0;
 }
 
+/* ==== CREDITS SECTION ==== */
 .credits-grid {
   display: flex;
   flex-wrap: wrap;
@@ -108,6 +125,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 999;
 }
 
 .modal-content {
@@ -130,6 +148,7 @@ body {
   display: none;
 }
 
+/* ==== CONTACT FORM ==== */
 .contact-form {
   display: flex;
   flex-direction: column;
