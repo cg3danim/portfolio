@@ -7,7 +7,7 @@ const workSection = document.querySelector('#work');
 workSection.addEventListener('mousemove', (e) => {
   const midpoint = window.innerWidth / 2;
   const cursor = e.clientX < midpoint ? 'left' : 'right';
-  document.body.style.cursor = `url(assets/cursor-${cursor}.png), auto`;
+  document.body.style.cursor = `url(assets/${cursor}.png), auto`;
 });
 
 workSection.addEventListener('click', (e) => {
