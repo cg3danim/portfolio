@@ -22,6 +22,7 @@ body {
   position: fixed;
   height: 100vh;
   justify-content: center; /* vertical centering */
+  box-sizing: border-box;
 }
 
 .sidebar .logo {
@@ -78,19 +79,23 @@ body {
 /* ==== WORK VIDEO SLIDER ==== */
 .video-slider-wrapper {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
   overflow: hidden;
+  padding-left: 240px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .video-slider {
   display: flex;
+  height: 100vh;
   transition: transform 0.5s ease;
 }
 
 .video-slider video {
-  width: calc(100vw - 240px);
+  width: 100vw;
   height: 100vh;
   object-fit: cover;
   flex-shrink: 0;
