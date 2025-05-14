@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credits – 3D Animator Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <img src="assets/logo.png" alt="Logo" class="logo" />
+      <nav class="menu">
+        <a href="index.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="tools.html">Tools</a>
+        <a href="credits.html" class="active">Credits</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section class="full-section credits">
+        <div class="credits-grid">
+          <div class="credit-item" data-id="film1"><img src="assets/credits/film1.jpg" alt="Film 1" /></div>
+          <div class="credit-item" data-id="film2"><img src="assets/credits/film2.jpg" alt="Film 2" /></div>
+          <div class="credit-item" data-id="film3"><img src="assets/credits/film3.jpg" alt="Film 3" /></div>
+          <div class="credit-item" data-id="film4"><img src="assets/credits/film4.jpg" alt="Film 4" /></div>
+        </div>
+
+        <div id="credit-description" class="modal hidden">
+          <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p id="credit-text"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="scripts/credits.js"></script>
+</body>
+</html>
