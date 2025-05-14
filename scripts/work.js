@@ -24,5 +24,5 @@ workSection.addEventListener('click', (e) => {
   } else if (e.clientX > midpoint && index < videos.length - 1) {
     index++;
   }
-  slider.style.transform = `translateX(-${index * (window.innerWidth - 240)}px)`;
+  slider.style.transform = `translateX(-${index * window.innerWidth}px)`;
 });
