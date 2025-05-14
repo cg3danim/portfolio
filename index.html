@@ -3,73 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3D Animator Portfolio</title>
+  <title>About – 3D Animator Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="layout">
-    <!-- Sidebar -->
+    <!-- Sidebar Navigation -->
     <aside class="sidebar">
       <img src="assets/logo.png" alt="Logo" class="logo" />
-      <nav>
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#tools">Tools</a>
-        <a href="#credits">Credits</a>
-        <a href="#contact">Contact</a>
+      <nav class="menu">
+        <a href="index.html" class="active">About</a>
+        <a href="work.html">Work</a>
+        <a href="tools.html">Tools</a>
+        <a href="credits.html">Credits</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </aside>
 
-    <!-- Main Content -->
+    <!-- Page Content -->
     <main class="main-content">
-      <section id="about" class="full-section about">
+      <section class="full-section about">
         <div class="section-content">
           <h1>About Me</h1>
-          <p>I’m a 3D Animator with over 10 years of experience in games, TV, and film. I specialize in expressive character animation, Soulslike combat, and cinematic rig workflows using Maya, Unity, and Unreal Engine.</p>
-        </div>
-      </section>
-
-      <section id="work" class="full-section work">
-        <div class="video-slider">
-          <video src="assets/videos/shot1.mp4" autoplay muted loop></video>
-          <video src="assets/videos/shot2.mp4" autoplay muted loop></video>
-        </div>
-      </section>
-
-      <section id="tools" class="full-section tools">
-        <div class="section-content">
-          <h1>Tools</h1>
-          <p>Maya, Unity, Unreal Engine, mGear, Python, Git, Blender</p>
-        </div>
-      </section>
-
-      <section id="credits" class="full-section credits">
-        <div class="credits-grid">
-          <div class="credit-item" data-id="film1"><img src="assets/credits/film1.jpg" alt="Film 1" /></div>
-          <div class="credit-item" data-id="film2"><img src="assets/credits/film2.jpg" alt="Film 2" /></div>
-        </div>
-        <div id="credit-description" class="modal hidden">
-          <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <p id="credit-text"></p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="full-section contact">
-        <div class="section-content">
-          <h1>Contact</h1>
-          <p>I’m available for freelance, collaboration, or full-time opportunities.</p>
-          <form class="contact-form" action="https://formspree.io/f/mzbllgkw" method="POST">
-            <input type="email" name="email" placeholder="Your email" required />
-            <textarea name="message" placeholder="Message" rows="6" required></textarea>
-            <button type="submit">Send Message</button>
-          </form>
+          <p>I’m a 3D Animator with over a decade of experience in television, games, and film. I specialize in expressive character animation, Soulslike combat, and cinematic rig workflows using Maya, Unity, and Unreal Engine.</p>
         </div>
       </section>
     </main>
   </div>
-
-  <script src="scripts.js"></script>
 </body>
 </html>
