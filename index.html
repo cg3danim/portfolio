@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
+  <div class="layout">
+    <!-- Sidebar -->
     <aside class="sidebar">
       <img src="assets/logo.png" alt="Logo" class="logo" />
-      <nav class="menu">
+      <nav>
         <a href="#about">About</a>
         <a href="#work">Work</a>
         <a href="#tools">Tools</a>
@@ -18,28 +19,35 @@
         <a href="#contact">Contact</a>
       </nav>
     </aside>
-    <main class="content">
-      <section id="about" class="about-section">
-        <div class="text-block">
-          <p>
-            I'm a 3D Animator with over a decade of experience in television, games, and film.
-            My work focuses on expressive character animation, cinematic sequences, and technical animation workflows.
-          </p>
-          <p>
-            From rigging pipelines to real-time animation in Unity and Unreal, I bring characters to life with technical fluency and artistic flair.
-            My current focus includes animation for Soulslike combat, cinematic rig setups, and expanding my workflow into Unreal Engine.
-          </p>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section id="about" class="full-section about">
+        <div class="section-content">
+          <h1>About Me</h1>
+          <p>I’m a 3D Animator with over 10 years of experience in games, TV, and film. I specialize in expressive character animation, Soulslike combat, and cinematic rig workflows using Maya, Unity, and Unreal Engine.</p>
         </div>
       </section>
-      <section id="work">
+
+      <section id="work" class="full-section work">
         <div class="video-slider">
           <video src="assets/videos/shot1.mp4" autoplay muted loop></video>
           <video src="assets/videos/shot2.mp4" autoplay muted loop></video>
         </div>
       </section>
-      <section id="credits" class="credits-grid">
-        <div class="credit-item" data-id="film1"><img src="assets/credits/film1.jpg" alt="Film 1" /></div>
-        <div class="credit-item" data-id="film2"><img src="assets/credits/film2.jpg" alt="Film 2" /></div>
+
+      <section id="tools" class="full-section tools">
+        <div class="section-content">
+          <h1>Tools</h1>
+          <p>Maya, Unity, Unreal Engine, mGear, Python, Git, Blender</p>
+        </div>
+      </section>
+
+      <section id="credits" class="full-section credits">
+        <div class="credits-grid">
+          <div class="credit-item" data-id="film1"><img src="assets/credits/film1.jpg" alt="Film 1" /></div>
+          <div class="credit-item" data-id="film2"><img src="assets/credits/film2.jpg" alt="Film 2" /></div>
+        </div>
         <div id="credit-description" class="modal hidden">
           <div class="modal-content">
             <span class="close-btn">&times;</span>
@@ -47,16 +55,21 @@
           </div>
         </div>
       </section>
-      <section id="contact" class="contact-section">
-        <p class="contact-intro">I’m available for freelance, collaboration, or full-time opportunities. Drop me a message below or connect on LinkedIn.</p>
-        <form class="contact-form" action="https://formspree.io/f/mzbllgkw" method="POST">
-          <input type="email" name="email" placeholder="Your email" required />
-          <textarea name="message" placeholder="Message" rows="6" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+
+      <section id="contact" class="full-section contact">
+        <div class="section-content">
+          <h1>Contact</h1>
+          <p>I’m available for freelance, collaboration, or full-time opportunities.</p>
+          <form class="contact-form" action="https://formspree.io/f/mzbllgkw" method="POST">
+            <input type="email" name="email" placeholder="Your email" required />
+            <textarea name="message" placeholder="Message" rows="6" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
       </section>
     </main>
   </div>
+
   <script src="scripts.js"></script>
 </body>
 </html>
