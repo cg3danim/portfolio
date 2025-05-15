@@ -25,3 +25,15 @@ creditItems.forEach(item => {
 closeBtn.addEventListener('click', () => {
   modal.classList.add('hidden');
 });
+
+console.log("Descriptions loaded:", descriptions);
+
+creditItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const id = item.dataset.id;
+    console.log("Clicked:", id);
+    console.log("Matching description:", descriptions[id]);
+    creditText.innerText = descriptions[id] || 'No description available.';
+    modal.classList.remove('hidden');
+  });
+});
