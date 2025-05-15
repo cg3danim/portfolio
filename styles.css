@@ -21,7 +21,7 @@ body {
 }
 
 .full-section {
-  min-height: 250vh;
+  min-height: 100vh;
   padding: 2rem 3rem;
   display: flex;
   align-items: flex-start;
@@ -29,6 +29,14 @@ body {
   position: relative;
   text-align: center;
   background: #FFFDF6;
+}
+
+/* ========== Shared Vertical Spacing Class ========== */
+.section-content-wrapper {
+  margin-top: 10%; /* ✅ adjust this value to move all sections up/down */
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
 }
 
 /* ========== Sidebar Navigation ========== */
@@ -45,7 +53,7 @@ body {
 }
 
 .sidebar .logo {
-  width: 350px;
+  width: 300px;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -55,7 +63,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 .menu a {
@@ -72,17 +80,6 @@ body {
 
 .menu a:not(.active):hover {
   color: #000;
-}
-
-/* ========== Section Content Positioning ========== */
-.about .section-content,
-.tools .section-content,
-.contact .section-content,
-.credits .section-content {
-  margin-top: 35%;
-  width: 100%;
-  max-width: 600px;
-  text-align: center;
 }
 
 /* ========== Contact Form ========== */
@@ -130,6 +127,7 @@ body {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  margin-top: 2rem;
 }
 
 .credit-item img {
