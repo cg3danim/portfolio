@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Work – 3D Animator Portfolio</title>
+  <title>Work</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -18,13 +18,15 @@
         <a href="contact.html">Contact</a>
       </nav>
     </aside>
-
     <main class="main-content">
-      <section class="full-section work">
-        <div class="video-slider-wrapper">
-          <div class="video-slider">
+      <section id="work" class="full-section work">
+        <div class="video-slider-wrapper" id="videoWrapper">
+          <div class="video-slider" id="videoSlider">
             <video src="assets/videos/shot1.mp4" autoplay muted loop></video>
             <video src="assets/videos/shot2.mp4" autoplay muted loop></video>
+          </div>
+          <div class="video-controls">
+            <input type="range" min="0" max="1" value="0" step="1" id="videoRange" />
           </div>
         </div>
       </section>
