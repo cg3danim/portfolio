@@ -54,7 +54,7 @@ body {
 
 /* ========== Shared Vertical Spacing Class ========== */
 .section-content-wrapper {
-  margin-top: 10%; /* ✅ adjust this value to move all sections up/down */
+  margin-top: 30%; /* ✅ adjust this value to move all sections up/down */
   width: 100%;
   max-width: 600px;
   text-align: center;
