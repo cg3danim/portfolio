@@ -32,7 +32,7 @@ body {
 
 /* ========== Sidebar Navigation ========== */
 .sidebar {
-  width: 480px; /* doubled width */
+  width: 400px; /* doubled width */
   background: #0d0d0d;
   padding: 2rem 1rem;
   display: flex;
