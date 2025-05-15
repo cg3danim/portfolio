@@ -13,8 +13,8 @@ body {
 }
 
 .main-content {
-  margin-left: 240px;
-  width: calc(100% - 240px);
+  margin-left: 480px; /* doubled from 240px */
+  width: calc(100% - 480px);
   height: 100vh;
   overflow-y: auto;
   scroll-behavior: smooth;
@@ -27,22 +27,24 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  text-align: center;
 }
 
 /* ========== Sidebar Navigation ========== */
 .sidebar {
-  width: 240px;
+  width: 480px; /* doubled width */
   background: #0d0d0d;
-  padding: 5rem 2rem;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* vertical centering */
   position: fixed;
   height: 100%;
 }
 
 .sidebar .logo {
-  width: 250px;
+  width: 300px; /* 3x larger logo */
   margin-bottom: 3rem;
 }
 
@@ -50,13 +52,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
+  gap: 2rem;
 }
 
 .menu a {
   color: #aaa;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.3rem; /* bigger font */
   transition: color 0.3s ease, font-weight 0.3s;
 }
 
@@ -74,7 +76,12 @@ body {
 .tools,
 .contact {
   background: #111;
-  text-align: center;
+}
+
+.about .section-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 10vw; /* 50% of page space left-right (25vw + 25vw) */
 }
 
 .credits {
@@ -175,7 +182,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding-left: 240px;
+  padding-left: 480px; /* match sidebar width */
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
@@ -198,8 +205,8 @@ body {
 /* ========== Video Navigation Slider ========== */
 .video-controls {
   position: absolute;
-  bottom: 2rem;
-  left: 240px;
+  bottom: 4rem; /* pulled closer to videos */
+  left: 480px;
   right: 2rem;
   display: flex;
   justify-content: center;
