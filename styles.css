@@ -205,8 +205,8 @@ body {
 /* ========== Video Navigation Slider ========== */
 .video-controls {
   position: absolute;
-  bottom: 4rem; /* pulled closer to videos */
-  left: 480px;
+  bottom: 2rem; /* pulled closer to videos */
+  left: 240px;
   right: 2rem;
   display: flex;
   justify-content: center;
