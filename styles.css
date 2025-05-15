@@ -77,11 +77,14 @@ body {
 .tools,
 .contact {
   background: #111;
+  text-align: center;
+  padding: 1.5rem 25% 2rem 25%
 }
 
 .about .section-content {
   max-width: 600px;
   margin: 0 auto;
+  margin-top: 0;
   text-align: center;
   padding: 1.5rem 25% 2rem 25%; /* 50% of page space left-right (25vw + 25vw) */
 }
