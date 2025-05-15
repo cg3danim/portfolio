@@ -13,8 +13,8 @@ body {
 }
 
 .main-content {
-  margin-left: 480px; /* doubled from 240px */
-  width: calc(100% - 480px);
+  margin-left: 300px; /* doubled from 240px */
+  width: calc(100% - 300px);
   height: 100vh;
   overflow-y: auto;
   scroll-behavior: smooth;
@@ -155,7 +155,7 @@ body {
 }
 
 .modal-content {
-  max-width: 400px;
+  max-width: 600px;
   padding: 2rem;
   background: #222;
   color: #fff;
