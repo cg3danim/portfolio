@@ -52,7 +52,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin-top: 15%; /* shift 30% closer to the top */
+  margin-top: 30%; /* shift 30% closer to the top */
 }
 
 .menu a {
