@@ -1,3 +1,24 @@
+/* ====== Fonts ====== */
+body, p, li, .section-content-wrapper {
+  font-family: 'Playfair Display', cursive; /* Font A for body */
+}
+
+h1, h2, h3, h4, h5, h6,
+nav.menu a {
+  font-family: 'Playfair Display', serif; /* Font B for headings/menu */
+}
+
+/* Optional styling for better appearance */
+h1, h2, h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+nav.menu a {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
 /* ========== Base Layout ========== */
 body {
   margin: 0;
