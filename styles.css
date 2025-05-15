@@ -21,7 +21,7 @@ body {
 }
 
 .full-section {
-  min-height: 100vh;
+  min-height: 400vh;
   padding: 2rem 3rem;
   display: flex;
   align-items: flex-start;
