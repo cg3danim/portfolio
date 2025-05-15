@@ -45,7 +45,7 @@ body {
 
 .sidebar .logo {
   width: 300px;
-  margin-top: 2rem;     /* lower the logo a bit */
+  margin-top: 5rem;     /* lower the logo a bit */
   margin-bottom: 2rem;  /* reduce spacing below it */
 }
 
@@ -83,10 +83,10 @@ body {
 }
 
 .about .section-content {
+  margin-top: 30%; /* 🔧 You can make this 5%, 15%, etc. */
+  width: 100%;
   max-width: 600px;
-  margin: 2rem auto 0 auto; /* adds top space without pushing it too far */
   text-align: center;
-  padding: 1rem 25%; /* keep wide margins */
 }
 
 .credits {
