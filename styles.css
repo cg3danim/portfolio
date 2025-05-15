@@ -22,9 +22,9 @@ body {
 
 .full-section {
   min-height: 100vh;
-  padding: 3rem;
+  padding: 2rem 3rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* content near top */
   justify-content: center;
   position: relative;
   text-align: center;
@@ -44,8 +44,9 @@ body {
 }
 
 .sidebar .logo {
-  width: 300px; /* 3x larger logo */
-  margin-bottom: 5rem;
+  width: 300px;
+  margin-top: 2rem;     /* lower the logo a bit */
+  margin-bottom: 2rem;  /* reduce spacing below it */
 }
 
 .menu {
@@ -83,10 +84,9 @@ body {
 
 .about .section-content {
   max-width: 600px;
-  margin: 0 auto;
-  margin-top: 0;
+  margin: 2rem auto 0 auto; /* adds top space without pushing it too far */
   text-align: center;
-  padding: 3rem 25%;/* 50% of page space left-right (25vw + 25vw) */
+  padding: 1rem 25%; /* keep wide margins */
 }
 
 .credits {
