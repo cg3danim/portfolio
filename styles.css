@@ -1,4 +1,4 @@
-/* ==== BASE STYLES ==== */
+/* ========== Base Layout ========== */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -8,42 +8,56 @@ body {
 
 .layout {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* ==== SIDEBAR ==== */
+.main-content {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.full-section {
+  min-height: 100vh;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* ========== Sidebar Navigation ========== */
 .sidebar {
   width: 240px;
   background: #0d0d0d;
+  padding: 1.5rem 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 2rem;
   position: fixed;
-  height: 100vh;
-  justify-content: center; /* vertical centering */
-  box-sizing: border-box;
+  height: 100%;
 }
 
 .sidebar .logo {
-  width: 300px;
-  margin-bottom: 5rem;
+  width: 100px;
+  margin-bottom: 1.5rem;
 }
 
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-  text-align: center;
+  align-items: center;
+  gap: 1.2rem;
 }
 
 .menu a {
   color: #aaa;
   text-decoration: none;
-  font-size: 2rem;
-  font-weight: normal;
-  transition: color 0.3s ease, font-weight 0.3s ease;
+  font-size: 0.9rem;
+  transition: color 0.3s ease, font-weight 0.3s;
 }
 
 .menu a.active {
@@ -51,119 +65,30 @@ body {
   font-weight: bold;
 }
 
-.menu a:hover {
+.menu a:not(.active):hover {
   color: #f90;
 }
 
-/* ==== MAIN CONTENT ==== */
-.main-content {
-  margin-left: 240px;
-  width: calc(100% - 240px);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-.full-section {
-  min-height: 100vh;
-  padding: 4rem 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.section-content {
-  max-width: 800px;
+/* ========== Section Styling ========== */
+.about,
+.tools,
+.contact {
+  background: #111;
   text-align: center;
 }
 
-/* ==== WORK VIDEO SLIDER ==== */
-.video-slider-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  padding-left: 240px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.credits {
+  background: #191919;
 }
 
-.video-slider {
-  display: flex;
-  height: 100vh;
-  gap: 2rem;
-  transition: transform 0.5s ease;
-}
-
-.video-slider video {
-  width: 80vw;
-  max-width: 960px;
-  height: auto;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-/* ==== CREDITS SECTION ==== */
-.credits-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
-
-.credit-item img {
-  width: 160px;
-  border: 2px solid #333;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.credit-item img:hover {
-  transform: scale(1.05);
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
-.modal-content {
-  max-width: 600px;
-  padding: 2rem;
-  background: #222;
-  color: #fff;
-  position: relative;
-}
-
-.close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  cursor: pointer;
-  font-size: 1.5rem;
-}
-
-.hidden {
-  display: none;
-}
-
-/* ==== CONTACT FORM ==== */
+/* ========== Contact Form ========== */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-top: 2rem;
+  max-width: 500px;
+  width: 100%;
 }
 
 .contact-form input,
@@ -189,4 +114,98 @@ body {
 .contact-form button:hover {
   background-color: #f90;
   color: black;
+}
+
+/* ========== Credits Section ========== */
+.credits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.credit-item img {
+  width: 160px;
+  border: 2px solid #333;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.credit-item img:hover {
+  transform: scale(1.05);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  max-width: 600px;
+  padding: 2rem;
+  background: #222;
+  color: #fff;
+  position: relative;
+  border-radius: 8px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ========== Work Section & Video Slider ========== */
+.video-slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-left: 240px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-slider {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+}
+
+.video-slider video {
+  width: 80vw;
+  max-width: 960px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ========== Video Navigation Slider ========== */
+.video-controls {
+  position: absolute;
+  bottom: 2rem;
+  left: 240px;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.video-controls input[type="range"] {
+  width: 60%;
+  accent-color: #f90;
 }
