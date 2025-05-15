@@ -206,7 +206,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding-left: 400px;
+  padding-left: 0;           /* ✅ remove sidebar offset */
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
@@ -217,6 +217,8 @@ body {
   display: flex;
   gap: 2rem;
   transition: transform 0.5s ease;
+  justify-content: center;    /* ✅ centers the slider */
+  align-items: center;
 }
 
 .video-slider video {
@@ -225,7 +227,9 @@ body {
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
+  margin-left: 400px;         /* ✅ offset to clear sidebar */
 }
+
 
 /* ========== Video Navigation Slider ========== */
 .video-controls {
