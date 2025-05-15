@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #FFFDF6;
-  color: #eee;
+  color: #000;
 }
 
 .layout {
@@ -13,7 +13,7 @@ body {
 }
 
 .main-content {
-  margin-left: 400px; /* doubled from 240px */
+  margin-left: 400px;
   width: calc(100% - 400px);
   height: 100vh;
   overflow-y: auto;
@@ -24,29 +24,30 @@ body {
   min-height: 100vh;
   padding: 2rem 3rem;
   display: flex;
-  align-items: flex-start; /* content near top */
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   text-align: center;
+  background: #FFFDF6;
 }
 
 /* ========== Sidebar Navigation ========== */
 .sidebar {
-  width: 400px; /* doubled width */
+  width: 400px;
   background: #FFFDF6;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: fixed;
-  height: 100vh;     /* 🔥 Takes full height of screen */
-  overflow: hidden;  /* ✅ Prevents it from scrolling */
+  height: 100vh;
+  overflow: hidden;
 }
 
 .sidebar .logo {
   width: 300px;
-  margin-top: 5rem;     /* lower the logo a bit */
-  margin-bottom: 2rem;  /* reduce spacing below it */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .menu {
@@ -54,43 +55,34 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin-top: 6rem; /* shift 30% closer to the top */
+  margin-top: 6rem;
 }
 
 .menu a {
-  color: #aaa;
+  color: #555;
   text-decoration: none;
-  font-size: 1.3rem; /* bigger font */
+  font-size: 1.3rem;
   transition: color 0.3s ease, font-weight 0.3s;
 }
 
 .menu a.active {
-  color: #f90;
+  color: #000;
   font-weight: bold;
 }
 
 .menu a:not(.active):hover {
-  color: #f90;
+  color: #000;
 }
 
-/* ========== Section Styling ========== */
-.about,
-.tools,
-.contact {
-  background: #FFFDF6;
-  text-align: center;
-  padding: 1.5rem 25% 2rem 25%
-}
-
-.about .section-content {
-  margin-top: 30%; /* 🔧 You can make this 5%, 15%, etc. */
+/* ========== Section Content Positioning ========== */
+.about .section-content,
+.tools .section-content,
+.contact .section-content,
+.credits .section-content {
+  margin-top: 10%;
   width: 100%;
   max-width: 600px;
   text-align: center;
-}
-
-.credits {
-  background: #FFFDF6;
 }
 
 /* ========== Contact Form ========== */
@@ -105,9 +97,9 @@ body {
 
 .contact-form input,
 .contact-form textarea {
-  background: transparent;
-  border: 1px solid #555;
-  color: white;
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #000;
   padding: 0.8rem;
   font-size: 1rem;
   border-radius: 4px;
@@ -115,8 +107,8 @@ body {
 
 .contact-form button {
   background-color: transparent;
-  color: white;
-  border: 1px solid #f90;
+  color: #000;
+  border: 1px solid #000;
   padding: 0.8rem;
   font-size: 1rem;
   cursor: pointer;
@@ -124,11 +116,15 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: #f90;
-  color: black;
+  background-color: #000;
+  color: #FFFDF6;
 }
 
 /* ========== Credits Section ========== */
+.credits {
+  background: #FFFDF6;
+}
+
 .credits-grid {
   display: flex;
   flex-wrap: wrap;
@@ -138,7 +134,7 @@ body {
 
 .credit-item img {
   width: 160px;
-  border: 2px solid #333;
+  border: 2px solid #aaa;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -153,7 +149,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,10 +158,11 @@ body {
 .modal-content {
   max-width: 600px;
   padding: 2rem;
-  background: #222;
-  color: #fff;
+  background: #FFFDF6;
+  color: #000;
   position: relative;
   border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 .close-btn {
@@ -176,10 +173,6 @@ body {
   font-size: 1.5rem;
 }
 
-.hidden {
-  display: none;
-}
-
 /* ========== Work Section & Video Slider ========== */
 .video-slider-wrapper {
   display: flex;
@@ -187,10 +180,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding-left: 480px; /* match sidebar width */
+  padding-left: 400px;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
+  background: #FFFDF6;
 }
 
 .video-slider {
@@ -210,8 +204,8 @@ body {
 /* ========== Video Navigation Slider ========== */
 .video-controls {
   position: absolute;
-  bottom: 1rem; /* pulled closer to videos */
-  left: 480px;
+  bottom: 1rem;
+  left: 400px;
   right: 2rem;
   display: flex;
   justify-content: center;
@@ -219,5 +213,5 @@ body {
 
 .video-controls input[type="range"] {
   width: 60%;
-  accent-color: #f90;
+  accent-color: #000;
 }
