@@ -33,7 +33,7 @@ body {
 /* ========== Sidebar Navigation ========== */
 .sidebar {
   width: 400px; /* doubled width */
-  background: #0d0d0d;
+  background: #111;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -45,7 +45,7 @@ body {
 
 .sidebar .logo {
   width: 300px; /* 3x larger logo */
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .menu {
@@ -82,11 +82,12 @@ body {
 .about .section-content {
   max-width: 600px;
   margin: 0 auto;
-  padding: 0 10vw; /* 50% of page space left-right (25vw + 25vw) */
+  text-align: center;
+  padding: 1.5rem 25% 2rem 25%; /* 50% of page space left-right (25vw + 25vw) */
 }
 
 .credits {
-  background: #191919;
+  background: #111;
 }
 
 /* ========== Contact Form ========== */
