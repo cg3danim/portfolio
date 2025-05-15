@@ -4,8 +4,72 @@
   <meta charset="UTF-8" />
   <title>Work</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .video-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 10%;
+      flex-wrap: wrap;
+    }
+
+    .video-thumb {
+      position: relative;
+      width: 240px;
+      height: 135px;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .video-thumb video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .video-thumb:hover video {
+      transform: scale(1.05);
+    }
+
+    .video-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      display: none;
+    }
+
+    .video-modal.active {
+      display: flex;
+    }
+
+    .video-modal video {
+      width: 80vw;
+      max-width: 960px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
 </head>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 <body>
   <div class="layout">
     <aside class="sidebar">
@@ -20,18 +84,45 @@
     </aside>
     <main class="main-content">
       <section id="work" class="full-section work">
-        <div class="video-slider-wrapper section-content-wrapper" id="videoWrapper">
-          <div class="video-slider" id="videoSlider">
-            <video src="assets/videos/shot1.mp4" autoplay muted loop></video>
-            <video src="assets/videos/shot2.mp4" autoplay muted loop></video>
+        <div class="video-gallery">
+          <div class="video-thumb" data-src="assets/videos/shot1.mp4">
+            <video src="assets/videos/shot1.mp4" muted></video>
           </div>
-          <div class="video-controls">
-            <input type="range" min="0" max="1" value="0" step="1" id="videoRange" />
+          <div class="video-thumb" data-src="assets/videos/shot2.mp4">
+            <video src="assets/videos/shot2.mp4" muted></video>
           </div>
+          <div class="video-thumb" data-src="assets/videos/shot3.mp4">
+            <video src="assets/videos/shot3.mp4" muted></video>
+          </div>
+        </div>
+        <div class="video-modal" id="videoModal">
+          <span class="close-modal" id="closeModal">×</span>
+          <video id="modalVideo" controls autoplay></video>
         </div>
       </section>
     </main>
-    <script src="scripts/work.js"></script>
   </div>
+  <script>
+    document.querySelectorAll('.video-thumb').forEach(thumb => {
+      const video = thumb.querySelector('video');
+      thumb.addEventListener('mouseenter', () => video.play());
+      thumb.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+
+      thumb.addEventListener('click', () => {
+        const modal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+        modalVideo.src = thumb.dataset.src;
+        modal.classList.add('active');
+      });
+    });
+
+    document.getElementById('closeModal').addEventListener('click', () => {
+      const modal = document.getElementById('videoModal');
+      const modalVideo = document.getElementById('modalVideo');
+      modal.classList.remove('active');
+      modalVideo.pause();
+      modalVideo.src = '';
+    });
+  </script>
 </body>
 </html>
