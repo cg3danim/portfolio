@@ -196,7 +196,7 @@ body {
 }
 
 .hidden {
-  display: none !important;
+  display: none ! important;
 }
 
 /* ========== Work Section & Video Slider ========== */
