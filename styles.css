@@ -45,7 +45,7 @@ body {
 
 .sidebar .logo {
   width: 300px; /* 3x larger logo */
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .menu {
@@ -86,7 +86,7 @@ body {
   margin: 0 auto;
   margin-top: 0;
   text-align: center;
-  padding: 1.5rem 25% 2rem 25%; /* 50% of page space left-right (25vw + 25vw) */
+  padding: 3rem 25%;/* 50% of page space left-right (25vw + 25vw) */
 }
 
 .credits {
