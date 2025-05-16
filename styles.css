@@ -231,16 +231,18 @@ body {
 }
 
 .video-thumb {
-  width: 640px;
-  height: 360px;
+  width: 640px !important;
+  height: 360px !important;
   overflow: hidden;
+  max-width: none;
+  flex: 0 0 auto;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .video-thumb video {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
