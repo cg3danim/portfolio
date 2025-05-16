@@ -130,6 +130,9 @@ body {
   margin-top: 2rem;
   max-width: 500px;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; /* Align labels or placeholders correctly */
 }
 
 .contact-form input,
