@@ -23,6 +23,17 @@ fetch('assets/credits/descriptions.json')
   .catch(err => console.error("Error loading descriptions.json:", err));
 
 // Close modal
-closeBtn.addEventListener('click', () => {
+function closeModal() {
   modal.classList.add('hidden');
+  creditText.textContent = '';
+}
+
+closeBtn.addEventListener('click', closeModal);
+
+// ✅ Also close if user clicks outside modal content
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    closeModal();
+  }
 });
+
