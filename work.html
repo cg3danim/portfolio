@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <title>Work</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     .video-gallery {
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 10%;
+      justify-content: flex-start;
       flex-wrap: wrap;
+      gap: 2rem;
     }
 
     .video-thumb {
       position: relative;
-      width: 240px;
-      height: 135px;
+      width: 500px;
+      height: 281px;
       overflow: hidden;
       border-radius: 8px;
       cursor: pointer;
@@ -42,11 +41,10 @@
       bottom: 0;
       background: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(10px);
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       z-index: 1000;
-      display: none;
     }
 
     .video-modal.active {
@@ -83,6 +81,7 @@
         <a href="contact.html">Contact</a>
       </nav>
     </aside>
+
     <main class="main-content">
       <section id="work" class="full-section work">
         <div class="section-content-wrapper left">
@@ -96,7 +95,9 @@
             <div class="video-thumb" data-src="assets/videos/shot3.mp4">
               <video src="assets/videos/shot3.mp4" muted></video>
             </div>
+          </div>
         </div>
+
         <div class="video-modal" id="videoModal">
           <span class="close-modal" id="closeModal">×</span>
           <video id="modalVideo" controls autoplay></video>
@@ -104,42 +105,40 @@
       </section>
     </main>
   </div>
-<script>
-  const modal = document.getElementById('videoModal');
-  const modalVideo = document.getElementById('modalVideo');
-  const closeBtn = document.getElementById('closeModal');
 
-  // Hover play/pause logic
-  document.querySelectorAll('.video-thumb').forEach(thumb => {
-    const video = thumb.querySelector('video');
+  <script>
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const closeBtn = document.getElementById('closeModal');
 
-    thumb.addEventListener('mouseenter', () => video.play());
-    thumb.addEventListener('mouseleave', () => {
-      video.pause();
-      video.currentTime = 0;
+    document.querySelectorAll('.video-thumb').forEach(thumb => {
+      const video = thumb.querySelector('video');
+
+      thumb.addEventListener('mouseenter', () => video.play());
+      thumb.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+
+      thumb.addEventListener('click', () => {
+        modalVideo.src = thumb.dataset.src;
+        modal.classList.add('active');
+      });
     });
 
-    thumb.addEventListener('click', () => {
-      modalVideo.src = thumb.dataset.src;
-      modal.classList.add('active');
-    });
-  });
-
-  // Close on click X
-  closeBtn.addEventListener('click', () => {
-    modal.classList.remove('active');
-    modalVideo.pause();
-    modalVideo.src = '';
-  });
-
-  // ✅ Close when clicking outside the video
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
+    closeBtn.addEventListener('click', () => {
       modal.classList.remove('active');
       modalVideo.pause();
       modalVideo.src = '';
-    }
-  });
-</script>
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        modalVideo.pause();
+        modalVideo.src = '';
+      }
+    });
+  </script>
 </body>
 </html>
