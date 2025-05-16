@@ -28,6 +28,10 @@ body {
   color: #000;
 }
 
+body.modal-active .sidebar {
+  filter: brightness(0.6);
+}
+
 .layout {
   display: flex;
   height: 100vh;
@@ -188,7 +192,7 @@ body {
 .modal {
   position: fixed;
   top: 0;
-  left: 400px; /* align to main content */
+  left: 0; /* align to main content */
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
