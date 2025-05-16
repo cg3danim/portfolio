@@ -24,7 +24,7 @@ nav.menu a {
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #FBF6E9;
+  background: #FAF7F0;
   color: #000;
 }
 
@@ -50,7 +50,7 @@ body {
   justify-content: flex-start; /* changed from center */
   position: relative;
   text-align: left;
-  background: #FBF6E9;
+  background: #FAF7F0;
 }
 
 /* ========== Shared Vertical Spacing Class ========== */
@@ -82,7 +82,7 @@ body {
 /* ========== Sidebar Navigation ========== */
 .sidebar {
   width: 400px;
-  background: #FBF6E9;
+  background: #FAF7F0;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -109,7 +109,7 @@ body {
 .menu a {
   color: #555;
   text-decoration: none;
-  font-size: 2.3rem;
+  font-size: 1.5rem;
   transition: color 0.3s ease, font-weight 0.3s;
 }
 
@@ -162,7 +162,7 @@ body {
 
 /* ========== Credits Section ========== */
 .credits {
-  background: #FBF6E9;
+  background: #FAF7F0;
 }
 
 .credits-grid {
@@ -201,7 +201,7 @@ body {
 .modal-content {
   max-width: 600px;
   padding: 2rem;
-  background: #FBF6E9;
+  background: #FAF7F0;
   color: #000;
   position: relative;
   border-radius: 8px;
