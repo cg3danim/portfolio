@@ -4,20 +4,20 @@ body, p, li, .section-content-wrapper {
   font-size: 1.5rem;
 }
 
-h1, h2, h3, h4, h5, h6,
-nav.menu a {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', cursive;
-  font-size: 1.5rem;
-}
-
-h1, h2, h3 {
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-nav.menu a {
+.menu a {
+  font-family: 'Playfair Display', cursive;
+  font-size: 2rem; /* ✅ change this to adjust menu font size */
   font-weight: 600;
-  font-size: 2.3rem;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s ease, font-weight 0.3s;
 }
 
 /* ========== Base Layout ========== */
@@ -51,7 +51,7 @@ body.modal-active .sidebar {
   padding: 2rem 3rem;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start; /* changed from center */
+  justify-content: flex-start;
   position: relative;
   text-align: left;
   background: #FAF7F0;
@@ -83,6 +83,7 @@ body.modal-active .sidebar {
   margin-right: auto;
   text-align: left;
 }
+
 /* ========== Sidebar Navigation ========== */
 .sidebar {
   width: 400px;
@@ -110,13 +111,6 @@ body.modal-active .sidebar {
   margin-top: 4rem;
 }
 
-.menu a {
-  color: #555;
-  text-decoration: none;
-  font-size: 1.5rem;
-  transition: color 0.3s ease, font-weight 0.3s;
-}
-
 .menu a.active {
   color: #000;
   font-weight: bold;
@@ -136,7 +130,7 @@ body.modal-active .sidebar {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  text-align: left; /* Align labels or placeholders correctly */
+  text-align: left;
 }
 
 .contact-form input,
@@ -192,13 +186,13 @@ body.modal-active .sidebar {
 .modal {
   position: fixed;
   top: 0;
-  left: 0; /* align to main content */
+  left: 0;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   z-index: 1000;
 }
 
@@ -224,7 +218,7 @@ body.modal-active .sidebar {
 }
 
 .hidden {
-  display: none ! important;
+  display: none !important;
 }
 
 /* ========== Work Section: Thumbnails Grid ========== */
