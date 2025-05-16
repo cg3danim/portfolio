@@ -156,7 +156,7 @@ body {
 }
 
 .credit-item img {
-  width: 160px;
+  width: 250px;
   border: 2px solid #aaa;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -254,4 +254,8 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+}
+.video-thumb {
+  width: 320px;
+  height: 180px;
 }
