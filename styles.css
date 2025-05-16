@@ -24,7 +24,7 @@ nav.menu a {
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #FFFDF6;
+  background: #FBF6E9;
   color: #000;
 }
 
@@ -50,7 +50,7 @@ body {
   justify-content: flex-start; /* changed from center */
   position: relative;
   text-align: left;
-  background: #FFFDF6;
+  background: #FBF6E9;
 }
 
 /* ========== Shared Vertical Spacing Class ========== */
@@ -82,7 +82,7 @@ body {
 /* ========== Sidebar Navigation ========== */
 .sidebar {
   width: 400px;
-  background: #FFFDF6;
+  background: #FBF6E9;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -157,12 +157,12 @@ body {
 
 .contact-form button:hover {
   background-color: #000;
-  color: #FFFDF6;
+  color: #FBF6E9;
 }
 
 /* ========== Credits Section ========== */
 .credits {
-  background: #FFFDF6;
+  background: #FBF6E9;
 }
 
 .credits-grid {
@@ -201,7 +201,7 @@ body {
 .modal-content {
   max-width: 600px;
   padding: 2rem;
-  background: #FFFDF6;
+  background: #FBF6E9;
   color: #000;
   position: relative;
   border-radius: 8px;
