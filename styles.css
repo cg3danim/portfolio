@@ -231,8 +231,8 @@ body {
 }
 
 .video-thumb {
-  width: 540px !important;
-  height: 304px !important;
+  width: 500px !important;
+  height: 281px !important;
   overflow: hidden;
   max-width: none;
   flex: 0 0 auto;
