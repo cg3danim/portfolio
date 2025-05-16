@@ -1,11 +1,13 @@
 /* ====== Fonts ====== */
 body, p, li, .section-content-wrapper {
   font-family: 'Playfair Display', cursive; /* Font A for body */
+  font-size: 1.5rem;
 }
 
 h1, h2, h3, h4, h5, h6,
 nav.menu a {
   font-family: 'Playfair Display', serif; /* Font B for headings/menu */
+  font-size: 2.5rem;
 }
 
 /* Optional styling for better appearance */
@@ -246,4 +248,10 @@ body {
 .video-controls input[type="range"] {
   width: 60%;
   accent-color: #000;
+}
+.video-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
