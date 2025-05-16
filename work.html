@@ -84,16 +84,17 @@
     </aside>
     <main class="main-content">
       <section id="work" class="full-section work">
-        <div class="video-gallery">
-          <div class="video-thumb" data-src="assets/videos/shot1.mp4">
-            <video src="assets/videos/shot1.mp4" muted></video>
-          </div>
-          <div class="video-thumb" data-src="assets/videos/shot2.mp4">
-            <video src="assets/videos/shot2.mp4" muted></video>
-          </div>
-          <div class="video-thumb" data-src="assets/videos/shot3.mp4">
-            <video src="assets/videos/shot3.mp4" muted></video>
-          </div>
+        <div class="section-content-wrapper">
+          <div class="video-gallery">
+            <div class="video-thumb" data-src="assets/videos/shot1.mp4">
+              <video src="assets/videos/shot1.mp4" muted></video>
+            </div>
+            <div class="video-thumb" data-src="assets/videos/shot2.mp4">
+              <video src="assets/videos/shot2.mp4" muted></video>
+            </div>
+            <div class="video-thumb" data-src="assets/videos/shot3.mp4">
+              <video src="assets/videos/shot3.mp4" muted></video>
+            </div>
         </div>
         <div class="video-modal" id="videoModal">
           <span class="close-modal" id="closeModal">×</span>
@@ -102,27 +103,42 @@
       </section>
     </main>
   </div>
-  <script>
-    document.querySelectorAll('.video-thumb').forEach(thumb => {
-      const video = thumb.querySelector('video');
-      thumb.addEventListener('mouseenter', () => video.play());
-      thumb.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+<script>
+  const modal = document.getElementById('videoModal');
+  const modalVideo = document.getElementById('modalVideo');
+  const closeBtn = document.getElementById('closeModal');
 
-      thumb.addEventListener('click', () => {
-        const modal = document.getElementById('videoModal');
-        const modalVideo = document.getElementById('modalVideo');
-        modalVideo.src = thumb.dataset.src;
-        modal.classList.add('active');
-      });
+  // Hover play/pause logic
+  document.querySelectorAll('.video-thumb').forEach(thumb => {
+    const video = thumb.querySelector('video');
+
+    thumb.addEventListener('mouseenter', () => video.play());
+    thumb.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
     });
 
-    document.getElementById('closeModal').addEventListener('click', () => {
-      const modal = document.getElementById('videoModal');
-      const modalVideo = document.getElementById('modalVideo');
+    thumb.addEventListener('click', () => {
+      modalVideo.src = thumb.dataset.src;
+      modal.classList.add('active');
+    });
+  });
+
+  // Close on click X
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+    modalVideo.pause();
+    modalVideo.src = '';
+  });
+
+  // ✅ Close when clicking outside the video
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
       modal.classList.remove('active');
       modalVideo.pause();
       modalVideo.src = '';
-    });
-  </script>
+    }
+  });
+</script>
 </body>
 </html>
