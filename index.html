@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Personal Work</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     .video-gallery {
       display: flex;
@@ -35,10 +35,7 @@
 
     .video-modal {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(10px);
       display: none;
@@ -72,17 +69,17 @@
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <button id="darkModeToggle" style="margin-top: auto; padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer;">
-        Toggle Dark Mode
-      </button>
-      <img src="assets/logo2.png" alt="Logo" class="logo" />
-      <nav class="menu">
-        <a href="index.html" class="active">Personal Work</a>
-        <a href="credits.html">Credits</a>
-        <a href="about.html">About</a>
-        <a href="tools.html">Tools</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="sidebar-top">
+        <img src="assets/logo2.png" alt="Logo" class="logo" />
+        <nav class="menu">
+          <a href="index.html" class="active">Personal Work</a>
+          <a href="credits.html">Credits</a>
+          <a href="about.html">About</a>
+          <a href="tools.html">Tools</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <button id="darkModeToggle">Toggle Dark Mode</button>
     </aside>
 
     <main class="main-content">
@@ -110,19 +107,38 @@
   </div>
 
   <script>
+    const toggleBtn = document.getElementById('darkModeToggle');
     const modal = document.getElementById('videoModal');
     const modalVideo = document.getElementById('modalVideo');
     const closeBtn = document.getElementById('closeModal');
 
+    function setDarkMode(enabled) {
+      if (enabled) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    }
+
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      setDarkMode(true);
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.contains('dark-mode');
+      setDarkMode(!isDark);
+    });
+
+    // Video thumbs hover play/pause and modal open
     document.querySelectorAll('.video-thumb').forEach(thumb => {
       const video = thumb.querySelector('video');
-
       thumb.addEventListener('mouseenter', () => video.play());
       thumb.addEventListener('mouseleave', () => {
         video.pause();
         video.currentTime = 0;
       });
-
       thumb.addEventListener('click', () => {
         modalVideo.src = thumb.dataset.src;
         modal.classList.add('active');
@@ -135,34 +151,13 @@
       modalVideo.src = '';
     });
 
-    modal.addEventListener('click', (e) => {
+    modal.addEventListener('click', e => {
       if (e.target === modal) {
         modal.classList.remove('active');
         modalVideo.pause();
         modalVideo.src = '';
       }
     });
-  const toggleBtn = document.getElementById('darkModeToggle');
-
-  function setDarkMode(enabled) {
-    if (enabled) {
-      document.body.classList.add('dark-mode');
-      localStorage.setItem('darkMode', 'enabled');
-    } else {
-      document.body.classList.remove('dark-mode');
-      localStorage.setItem('darkMode', 'disabled');
-    }
-  }
-
-  // Initialize from saved preference
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    setDarkMode(true);
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    const isDark = document.body.classList.contains('dark-mode');
-    setDarkMode(!isDark);
-  });
   </script>
 </body>
 </html>
