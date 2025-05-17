@@ -177,6 +177,16 @@ body.dark-mode .sidebar .logo {
   border-color: #f90;
 }
 
+.credit-item img {
+  width: 250px;
+  height: 140px;        /* Fix height to keep uniform aspect */
+  object-fit: cover;    /* Crop/scale image to fill the box */
+  border: 2px solid #aaa;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 6px;
+  display: block;
+}
 /* ===== Dark Mode Styles ===== */
 body.dark-mode {
   background-color: #121212;
