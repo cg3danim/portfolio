@@ -9,14 +9,16 @@
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <img src="assets/logo2.png" alt="Logo" class="logo" />
-      <nav class="menu">
-        <a href="index.html">Personal Work</a>
-        <a href="credits.html">Credits</a>
-        <a href="about.html" class="active">About</a>
-        <a href="tools.html">Tools</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="sidebar-top">
+        <img src="assets/logo2.png" alt="Logo" class="logo" />
+        <nav class="menu">
+          <a href="index.html">Personal Work</a>
+          <a href="credits.html">Credits</a>
+          <a href="about.html" class="active">About</a>
+          <a href="tools.html">Tools</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
       <button id="darkModeToggle">Toggle Dark Mode</button>
     </aside>
 
@@ -48,7 +50,6 @@
       }
     }
 
-    // Initialize dark mode based on saved preference
     if (localStorage.getItem('darkMode') === 'enabled') {
       setDarkMode(true);
     }
