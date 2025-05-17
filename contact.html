@@ -5,58 +5,25 @@
   <title>Contact</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-      margin-top: 2rem;
-      max-width: 500px;
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.8rem 1rem;
-      font-size: 1.1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #fff;
-      color: #000;
-      box-sizing: border-box;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    .contact-form textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .contact-form button {
-      width: 100%;
-      padding: 0.8rem 1rem;
-      font-size: 1.2rem;
-      cursor: pointer;
-      border: 1px solid #000;
-      background-color: transparent;
-      color: #000;
-      border-radius: 5px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    .contact-form button:hover {
-      background-color: #f90;
-      color: #121212;
-      border-color: #f90;
-    }
-  </style>
 </head>
 <body>
+
+  <!-- === MOBILE HEADER === -->
+  <header class="mobile-header">
+    <img src="assets/logo2.png" alt="Logo" class="logo" />
+    <div id="hamburger" class="hamburger">&#9776;</div>
+  </header>
+
+  <!-- === MOBILE MENU OVERLAY === -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="close-btn" id="closeMobileMenu">&times;</div>
+    <a href="index.html">Personal Work</a>
+    <a href="credits.html">Credits</a>
+    <a href="about.html">About</a>
+    <a href="tools.html">Tools</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+
   <div class="layout">
     <aside class="sidebar">
       <div class="sidebar-top">
@@ -87,27 +54,6 @@
     </main>
   </div>
 
-  <script>
-    const toggleBtn = document.getElementById('darkModeToggle');
-
-    function setDarkMode(enabled) {
-      if (enabled) {
-        document.body.classList.add('dark-mode');
-        localStorage.setItem('darkMode', 'enabled');
-      } else {
-        document.body.classList.remove('dark-mode');
-        localStorage.setItem('darkMode', 'disabled');
-      }
-    }
-
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      setDarkMode(true);
-    }
-
-    toggleBtn.addEventListener('click', () => {
-      const isDark = document.body.classList.contains('dark-mode');
-      setDarkMode(!isDark);
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
