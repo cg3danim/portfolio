@@ -4,59 +4,60 @@
   <meta charset="UTF-8" />
   <title>Contact</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <button id="darkModeToggle" style="margin-top: auto; padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer;">
-        Toggle Dark Mode
-      </button>
-      <img src="assets/logo2.png" alt="Logo" class="logo" />
-      <nav class="menu">
-        <a href="index.html">Personal Work</a>
-        <a href="credits.html">Credits</a>
-        <a href="about.html">About</a>
-        <a href="tools.html">Tools</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
+      <div class="sidebar-top">
+        <img src="assets/logo2.png" alt="Logo" class="logo" />
+        <nav class="menu">
+          <a href="index.html">Personal Work</a>
+          <a href="credits.html">Credits</a>
+          <a href="about.html">About</a>
+          <a href="tools.html">Tools</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+      </div>
+      <button id="darkModeToggle">Toggle Dark Mode</button>
     </aside>
+
     <main class="main-content">
       <section class="full-section contact">
         <div class="section-content-wrapper centered">
           <h1>Contact Me</h1>
-          <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
-            <input type="text" name="name" placeholder="Your name" required>
-            <input type="email" name="email" placeholder="Your email" required>
-            <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="_replyto" placeholder="Email" required />
+            <textarea name="message" placeholder="Your message" rows="5" required></textarea>
             <button type="submit">Send</button>
           </form>
         </div>
       </section>
     </main>
   </div>
+
   <script>
-  const toggleBtn = document.getElementById('darkModeToggle');
+    const toggleBtn = document.getElementById('darkModeToggle');
 
-  function setDarkMode(enabled) {
-    if (enabled) {
-      document.body.classList.add('dark-mode');
-      localStorage.setItem('darkMode', 'enabled');
-    } else {
-      document.body.classList.remove('dark-mode');
-      localStorage.setItem('darkMode', 'disabled');
+    function setDarkMode(enabled) {
+      if (enabled) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+      }
     }
-  }
 
-  // Initialize from saved preference
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    setDarkMode(true);
-  }
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      setDarkMode(true);
+    }
 
-  toggleBtn.addEventListener('click', () => {
-    const isDark = document.body.classList.contains('dark-mode');
-    setDarkMode(!isDark);
-  });
-</script>
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.contains('dark-mode');
+      setDarkMode(!isDark);
+    });
+  </script>
 </body>
 </html>
