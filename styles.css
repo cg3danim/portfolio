@@ -1,4 +1,3 @@
-
 /* ====== Base Styles ====== */
 html, body {
   margin: 0;
@@ -63,7 +62,7 @@ body.dark-mode .sidebar .logo {
   color: #555;
   text-decoration: none;
   font-family: 'Playfair Display', cursive;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 600;
   transition: color 0.3s ease, font-weight 0.3s;
 }
@@ -97,19 +96,21 @@ body.dark-mode .sidebar .logo {
 }
 
 .full-section {
-  height: 100%;
   padding: 2rem 3rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  display: block;              /* ⬅ No flex here */
   position: relative;
   text-align: left;
 }
 
+
 /* Responsive Mobile Header & Menu */
+
+
 .mobile-header {
   display: none;
 }
+
+
 
 .mobile-menu {
   display: none;
@@ -121,30 +122,28 @@ body.dark-mode .sidebar .logo {
     display: none;
   }
 
-  .mobile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #121212;
-    color: #fff;
-    padding: 1rem 1.5rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
+  
 
-  .mobile-header .logo {
-    width: 180px;
-    transform: scale(0.9);
-  }
+.mobile-header {
+  display: none;
+}
 
-  .hamburger {
-    font-size: 1.8rem;
-    cursor: pointer;
-    user-select: none;
-  }
+
+
+  
+.mobile-header .logo {
+  width: 70px;
+  height: auto;
+}
+
+
+  
+.hamburger {
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
 
   .mobile-menu {
     position: fixed;
@@ -152,7 +151,7 @@ body.dark-mode .sidebar .logo {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #121212;
+    background: #121212; background: #FAF7F0;
     color: white;
     display: none;
     flex-direction: column;
@@ -169,7 +168,7 @@ body.dark-mode .sidebar .logo {
 
   .mobile-menu a {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-decoration: none;
     font-family: 'Playfair Display', cursive;
     transition: color 0.3s ease;
@@ -210,10 +209,298 @@ body.dark-mode .menu a:hover:not(.active) {
   color: #f90;
 }
 
+body.dark-mode 
+
+.mobile-header {
+  display: none;
+}
+
+
+
+body.dark-mode .mobile-menu {
+  background: #1f1f1f; background: #FAF7F0;
+}
+
+/* Dark mode logo in mobile header */
+body.dark-mode 
+.mobile-header .logo {
+  width: 70px;
+  height: auto;
+}
+
+
+
+.video-gallery {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.video-thumb {
+  width: 200px;
+  height: 120px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.video-thumb:hover {
+  transform: scale(1.02);
+}
+
+.video-thumb video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.video-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.video-modal.active {
+  display: flex;
+}
+
+.video-modal video {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* === Responsive Sidebar: mobile-specific styles only === */
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+
+  
+
+.mobile-header {
+  display: none;
+}
+
+
+
+  
+.mobile-header .logo {
+  width: 70px;
+  height: auto;
+}
+
+
+  
+.hamburger {
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100%;
+    background: #FAF7F0; /* light mode background */
+    padding-top: 5rem;
+    z-index: 1001;
+    gap: 2rem;
+    align-items: center;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+    font-family: 'Playfair Display', cursive;
+    color: #000;
+    font-size: 1.1rem;
+  }
+}
+
+/* === Dark mode overrides for mobile === */
+body.dark-mode 
+
+.mobile-header {
+  display: none;
+}
+
+
+body.dark-mode .mobile-menu {
+  background: #1f1f1f;
+}
+body.dark-mode .mobile-menu a {
+  color: #f0f0f0;
+}
+
+@media (max-width: 1024px) {
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FAF7F0;
+    color: #000;
+    height: 40px;
+    padding: 0 0.75rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .mobile-header .logo {
+    width: 70px;
+    height: auto;
+  }
+
+  .hamburger {
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+}
+
+/* Dark mode support */
 body.dark-mode .mobile-header {
   background: #1f1f1f;
 }
 
-body.dark-mode .mobile-menu {
+body.dark-mode .mobile-header .logo {
+  filter: invert(1) brightness(1.2);
+}
+
+/* Ensure hamburger icon is visible in dark mode */
+body.dark-mode .hamburger {
+  color: #f0f0f0;
+}
+
+
+@media (max-width: 1024px) {
+  body.dark-mode .mobile-header {
+    display: flex !important;
+  }
+
+  body.dark-mode .mobile-header .logo {
+    filter: invert(1) brightness(1.2);
+    display: inline !important;
+  }
+
+  body.dark-mode .hamburger {
+    color: #f0f0f0;
+    display: inline !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mobile-menu .close-btn {
+    color: #000;
+  }
+  body.dark-mode .mobile-menu .close-btn {
+    color: #f0f0f0;
+  }
+}
+/* === Fix 6A: Scale credit thumbnails and layout in a single row === */
+
+.credits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.credit-item {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.credit-item img {
+  width: 150px;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* === Fix 6B: Credit Description Modal Styles === */
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 2rem;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal .modal-content {
+  background: #fff;
+  color: #000;
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.modal .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+/* Optional: Dark mode support */
+body.dark-mode .modal .modal-content {
   background: #1f1f1f;
+  color: #fff;
+}
+
+body.dark-mode .modal .close-btn {
+  color: #fff;
 }
