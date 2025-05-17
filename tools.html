@@ -4,54 +4,55 @@
   <meta charset="UTF-8" />
   <title>Tools</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <button id="darkModeToggle" style="margin-top: auto; padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer;">
-        Toggle Dark Mode
-      </button>
-      <img src="assets/logo2.png" alt="Logo" class="logo" />
-      <nav class="menu">
-        <a href="index.html">Personal Work</a>
-        <a href="credits.html">Credits</a>
-        <a href="about.html">About</a>
-        <a href="tools.html" class="active">Tools</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="sidebar-top">
+        <img src="assets/logo2.png" alt="Logo" class="logo" />
+        <nav class="menu">
+          <a href="index.html">Personal Work</a>
+          <a href="credits.html">Credits</a>
+          <a href="about.html">About</a>
+          <a href="tools.html" class="active">Tools</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <button id="darkModeToggle">Toggle Dark Mode</button>
     </aside>
+
     <main class="main-content">
       <section class="full-section tools">
         <div class="section-content-wrapper centered">
           <h1>Tools</h1>
-          <p>Experienced with Maya, mGear, Unity, Unreal Engine, and more.</p>
+          <p>Here you can list or describe your 3D animation and development tools.</p>
         </div>
       </section>
     </main>
   </div>
+
   <script>
-  const toggleBtn = document.getElementById('darkModeToggle');
+    const toggleBtn = document.getElementById('darkModeToggle');
 
-  function setDarkMode(enabled) {
-    if (enabled) {
-      document.body.classList.add('dark-mode');
-      localStorage.setItem('darkMode', 'enabled');
-    } else {
-      document.body.classList.remove('dark-mode');
-      localStorage.setItem('darkMode', 'disabled');
+    function setDarkMode(enabled) {
+      if (enabled) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+      }
     }
-  }
 
-  // Initialize from saved preference
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    setDarkMode(true);
-  }
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      setDarkMode(true);
+    }
 
-  toggleBtn.addEventListener('click', () => {
-    const isDark = document.body.classList.contains('dark-mode');
-    setDarkMode(!isDark);
-  });
-</script>
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.contains('dark-mode');
+      setDarkMode(!isDark);
+    });
+  </script>
 </body>
 </html>
