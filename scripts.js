@@ -56,14 +56,17 @@ let descriptions = {};
 if (modal) {
   fetch('assets/credits/descriptions.json')
     .then(res => res.json())
-    .then(data => { descriptions = data; });
-  creditItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const id = item.dataset.id;
-      creditText.innerText = descriptions[id] || 'No description available.';
-      modal.classList.remove('hidden');
+    .then(data => {
+      descriptions = data;
+      creditItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const id = item.dataset.id;
+          creditText.innerText = descriptions[id] || 'No description available.';
+          modal.classList.remove('hidden');
+        });
+      });
     });
-  });
+
   closeBtn?.addEventListener('click', () => {
     modal.classList.add('hidden');
     creditText.textContent = '';

@@ -583,3 +583,13 @@ body.dark-mode input::placeholder,
 body.dark-mode textarea::placeholder {
   color: #aaa;
 }
+.social-icon-link {
+  margin-top: 1rem;
+  color: #f0f0f0; /* Light in dark mode */
+  text-decoration: none;
+}
+
+.social-icon-link:hover .social-icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
