@@ -10,25 +10,34 @@ html, body {
 
 .layout {
   display: flex;
-  height: 100vh;
+  flex-wrap: nowrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .main-content {
   flex-grow: 1;
   overflow: auto;
   scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Sidebar */
 .sidebar {
-  width: 400px;
+  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  box-sizing: border-box;
+  flex-shrink: 0;
   background: #FAF7F0;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;  /* ✅ fill screen on short pages, grow on tall ones */
+  height: auto;
   position: sticky;
   top: 0;
   transition: all 0.3s ease;
@@ -96,11 +105,18 @@ body.dark-mode .sidebar .logo {
 }
 
 .full-section {
-  padding: 2rem 3rem;
-  display: block;              /* ⬅ No flex here */
-  position: relative;
-  text-align: left;
+  padding-top: 8rem;          /* move content down */
+  flex-grow: 1;               /* fill space without forcing height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
+
+
 
 
 /* Responsive Mobile Header & Menu */
@@ -503,4 +519,20 @@ body.dark-mode .modal .modal-content {
 
 body.dark-mode .modal .close-btn {
   color: #fff;
+}
+.section-content-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+html, body {
+  height: 100%;
+}
+
+.layout,
+.main-content,
+.full-section {
+  min-height: 100vh;
+  background-color: inherit;
 }
