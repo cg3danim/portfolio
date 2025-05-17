@@ -285,3 +285,71 @@ body.modal-active .sidebar {
   cursor: pointer;
   font-weight: bold;
 }
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .sidebar {
+  background-color: #1f1f1f;
+  filter: none; /* disable brightness dim */
+}
+
+body.dark-mode .menu a {
+  color: #bbb;
+}
+
+body.dark-mode .menu a.active {
+  color: #f90;
+}
+
+body.dark-mode .menu a:hover:not(.active) {
+  color: #f90;
+}
+
+body.dark-mode .full-section {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background-color: #222;
+  border: 1px solid #444;
+  color: #eee;
+}
+
+body.dark-mode .contact-form button {
+  border: 1px solid #f90;
+  color: #f90;
+}
+
+body.dark-mode .contact-form button:hover {
+  background-color: #f90;
+  color: #121212;
+}
+
+body.dark-mode .modal,
+body.dark-mode .video-modal {
+  background-color: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+body.dark-mode .modal-content,
+body.dark-mode .video-modal video {
+  background-color: #222;
+  color: #eee;
+}
+
+body.dark-mode .close-btn,
+body.dark-mode .close-modal {
+  color: #eee;
+}
+
+body.dark-mode .credit-item img {
+  border-color: #555;
+}
+
+
