@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Karla', sans-serif;
   background: #FAF7F0;
   color: #000;
 }
@@ -50,8 +50,8 @@ html, body {
 }
 
 .sidebar .logo {
-  width: 300px;
-  margin-top: 5rem;
+  width: 250px;
+  margin-top: 4rem;
   margin-bottom: 2rem;
   transition: filter 0.3s ease, transform 0.3s ease;
 }
@@ -64,13 +64,13 @@ body.dark-mode .sidebar .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .menu a {
   color: #555;
   text-decoration: none;
-  font-family: 'Playfair Display', cursive;
+  font-family: 'Karla', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   transition: color 0.3s ease, font-weight 0.3s;
@@ -186,7 +186,7 @@ body.dark-mode .sidebar .logo {
     color: #fff;
     font-size: 1rem;
     text-decoration: none;
-    font-family: 'Playfair Display', cursive;
+    font-family: 'Karla', sans-serif;
     transition: color 0.3s ease;
   }
 
@@ -240,7 +240,7 @@ body.dark-mode .mobile-menu {
 /* Dark mode logo in mobile header */
 body.dark-mode 
 .mobile-header .logo {
-  width: 70px;
+  width: 50px;
   height: auto;
 }
 
@@ -304,11 +304,29 @@ body.dark-mode
 
 /* === Responsive Sidebar: mobile-specific styles only === */
 @media (max-width: 1024px) {
-  .sidebar {
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 2000;
+    background: inherit; /* ← retain light/dark mode background */
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
   }
 
-  
+  .mobile-menu.active {
+    display: flex;
+  }
 
 .mobile-header {
   display: none;
@@ -331,29 +349,12 @@ body.dark-mode
 }
 
 
-  .mobile-menu {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 180px;
-    height: 100%;
-    background: #FAF7F0; /* light mode background */
-    padding-top: 5rem;
-    z-index: 1001;
-    gap: 2rem;
-    align-items: center;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  }
 
-  .mobile-menu.active {
-    display: flex;
-  }
+
 
   .mobile-menu a {
     text-decoration: none;
-    font-family: 'Playfair Display', cursive;
+    font-family: 'Karla', sans-serif;
     color: #000;
     font-size: 1.1rem;
   }
@@ -436,6 +437,11 @@ body.dark-mode .hamburger {
 @media (max-width: 1024px) {
   .mobile-menu .close-btn {
     color: #000;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
   }
   body.dark-mode .mobile-menu .close-btn {
     color: #f0f0f0;
@@ -494,7 +500,7 @@ body.dark-mode .hamburger {
   border-radius: 8px;
   position: relative;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 1rem;
 }
 
@@ -535,4 +541,45 @@ html, body {
 .full-section {
   min-height: 100vh;
   background-color: inherit;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 140%;
+  padding: 0.4rem 0.6rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Only affects the message field */
+textarea {
+  min-height: 180px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button[type="submit"] {
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  margin-top: 1rem;
+  align-self: center;
+}
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode textarea {
+  background-color: #1f1f1f;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #aaa;
 }
