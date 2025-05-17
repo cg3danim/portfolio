@@ -38,10 +38,10 @@ body {
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* spreads top and bottom */
+  justify-content: space-between; /* pushes toggle button to bottom */
   align-items: center;
+  height: 100vh;  /* full viewport height */
   position: fixed;
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -51,6 +51,7 @@ body {
   align-items: center;
 }
 
+/* Logo sizing & spacing */
 .sidebar .logo {
   width: 300px;
   margin-top: 5rem;
@@ -82,9 +83,9 @@ body {
   color: #000;
 }
 
-/* Dark Mode Toggle Button */
+/* Dark mode toggle button */
 #darkModeToggle {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem; /* breathing room from bottom */
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
@@ -93,6 +94,7 @@ body {
   color: #555;
   border-radius: 4px;
   transition: all 0.3s ease;
+  align-self: center; /* center horizontally */
 }
 
 #darkModeToggle:hover {
@@ -119,7 +121,7 @@ body {
   text-align: center;
 }
 
-/* Dark Mode Styles */
+/* ===== Dark Mode Styles ===== */
 body.dark-mode {
   background-color: #121212;
   color: #e0e0e0;
@@ -148,4 +150,4 @@ body.dark-mode .full-section {
   color: #e0e0e0;
 }
 
-/* Add your other dark mode styles here... */
+/* Add other dark mode styles as needed */
