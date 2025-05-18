@@ -18,19 +18,25 @@ function openModal(description) {
 }
 
 // Load descriptions and set up events
-fetch('assets/credits/descriptions.txt')
-  .then(res => res.json())
+fetch('assets/credits/descriptions.json')
+  .then(res => {
+    if (!res.ok) throw new Error(`HTTP ${res.status} - ${res.statusText}`);
+    return res.json();
+  })
   .then(data => {
-    console.log("Descriptions loaded:", data);
+    console.log("✅ Descriptions loaded:", data);
+
     document.querySelectorAll('.credit-item').forEach(item => {
       item.addEventListener('click', () => {
         const id = item.dataset.id;
-        console.log("Clicked:", id);
+        console.log("🟡 Clicked:", id);
+        console.log("💬 Description:", data[id]);
         openModal(data[id]);
       });
     });
   })
-  .catch(err => console.error("Error loading descriptions.json:", err));
+  .catch(err => console.error("❌ Failed to load descriptions:", err));
+
 
 // Close with X
 closeBtn.addEventListener('click', closeModal);
