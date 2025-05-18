@@ -1,5 +1,5 @@
-// === DARK MODE TOGGLE ===
 document.addEventListener("DOMContentLoaded", () => {
+  // === DARK MODE TOGGLE ===
   const toggleBtn = document.getElementById('darkModeToggle');
 
   function setDarkMode(enabled) {
@@ -46,10 +46,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    closeBtn?.addEventListener('click', () => {
-      modal.classList.add('hidden');
-      creditText.textContent = '';
-    });
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        creditText.textContent = '';
+      });
+    }
 
     modal.addEventListener('click', e => {
       if (e.target === modal) {
@@ -59,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // === VIDEO THUMB MODAL (Work section) ===
+  // === WORK SECTION VIDEO MODAL ===
   const videoThumbs = document.querySelectorAll('.video-thumb');
   const videoModal = document.getElementById('videoModal');
   const modalVideo = document.getElementById('modalVideo');
@@ -83,13 +85,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    closeModalBtn?.addEventListener('click', () => {
-      videoModal.classList.remove('active');
-      modalVideo.pause();
-      modalVideo.src = '';
-    });
+    if (closeModalBtn) {
+      closeModalBtn.addEventListener('click', () => {
+        videoModal.classList.remove('active');
+        modalVideo.pause();
+        modalVideo.src = '';
+      });
+    }
 
-    videoModal.addEventListener('click', e => {
+    videoModal.addEventListener('click', (e) => {
       if (e.target === videoModal) {
         videoModal.classList.remove('active');
         modalVideo.pause();
