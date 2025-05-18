@@ -18,7 +18,7 @@ function openModal(description) {
 }
 
 // Load descriptions and set up events
-fetch('assets/credits/descriptions.json')
+fetch('assets/credits/descriptions.txt')
   .then(res => res.json())
   .then(data => {
     console.log("Descriptions loaded:", data);
