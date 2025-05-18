@@ -592,3 +592,31 @@ body.dark-mode textarea::placeholder {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.social-icon-link:hover .social-icon {
+  transform: scale(1.1);
+}
+
+.linkedin-desktop,
+.linkedin-mobile {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  .linkedin-desktop {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .linkedin-mobile {
+    display: block;
+  }
+}
