@@ -119,14 +119,17 @@ body.dark-mode .sidebar .logo {
 
 
 
+/* DO NOT DELETE DUPLICATES */
 
-@media (max-width: 1024px) {
-  .mobile-header {
-    display: flex;
-    ...
-  }
+
+.mobile-header {
+  display: none;
 }
 
+
+.mobile-menu {
+  display: none;
+}
 
 /* Responsive Behavior */
 @media (max-width: 1024px) {
@@ -145,11 +148,6 @@ body.dark-mode .sidebar .logo {
 
 
   
-.hamburger {
-  font-size: 1rem;
-  cursor: pointer;
-  line-height: 1;
-}
 
 
   .mobile-menu {
@@ -158,7 +156,6 @@ body.dark-mode .sidebar .logo {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #121212; background: #FAF7F0;
     color: white;
     display: none;
     flex-direction: column;
@@ -326,11 +323,6 @@ body.dark-mode
 
 
   
-.hamburger {
-  font-size: 1rem;
-  cursor: pointer;
-  line-height: 1;
-}
 
 
 
@@ -384,10 +376,6 @@ body.dark-mode .mobile-menu a {
   }
 }
 
-/* Dark mode support */
-body.dark-mode .mobile-header {
-  background: #1f1f1f;
-}
 
 body.dark-mode .mobile-header .logo {
   filter: invert(1) brightness(1.2);
@@ -401,6 +389,7 @@ body.dark-mode .hamburger {
 
 @media (max-width: 1024px) {
   body.dark-mode .mobile-header {
+    background: #1f1f1f;
     display: flex !important;
   }
 
