@@ -122,12 +122,12 @@ body.dark-mode .sidebar .logo {
 /* DO NOT DELETE DUPLICATES */
 
 
-.mobile-header {
+.mobile-header { /* ← dont touch */
   display: none;
 }
 
 
-.mobile-menu {
+.mobile-menu { /* ← dont touch */
   display: none;
 }
 
@@ -146,49 +146,11 @@ body.dark-mode .sidebar .logo {
   height: auto;
 }
 
-
-  
-
-
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: white;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    z-index: 2000;
-    text-align: center;
-  }
-
-  .mobile-menu.active {
-    display: flex;
-  }
-
-  .mobile-menu a {
-    color: #fff;
-    font-size: 1rem;
-    text-decoration: none;
-    font-family: 'Karla', sans-serif;
-    transition: color 0.3s ease;
-  }
-
   .mobile-menu a:hover {
     color: #f90;
   }
 
-  .mobile-menu .close-btn {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    font-size: 2rem;
-    cursor: pointer;
-  }
+
 }
 
 /* ===== Dark Mode Styles ===== */
@@ -216,10 +178,6 @@ body.dark-mode .menu a:hover:not(.active) {
 body.dark-mode 
 
 
-
-body.dark-mode .mobile-menu {
-  background: #1f1f1f; background: #FAF7F0;
-}
 
 /* Dark mode logo in mobile header */
 body.dark-mode 
@@ -311,28 +269,18 @@ body.dark-mode
   .mobile-menu.active {
     display: flex;
   }
-
-
-
-
   
 .mobile-header .logo {
   width: 70px;
   height: auto;
 }
 
-
-  
-
-
-
-
-
-  .mobile-menu a {
+  .mobile-menu a { /* ← dont touch */
     text-decoration: none;
     font-family: 'Karla', sans-serif;
     color: #000;
     font-size: 1.1rem;
+    transition: color 0.3s ease;
   }
 }
 
@@ -341,7 +289,7 @@ body.dark-mode
 
 
 
-body.dark-mode .mobile-menu {
+body.dark-mode .mobile-menu { /* ← dont touch */
   background: #1f1f1f;
 }
 body.dark-mode .mobile-menu a {
