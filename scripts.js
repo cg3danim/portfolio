@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 // === DARK MODE TOGGLE ===
 const toggleBtn = document.getElementById('darkModeToggle');
 
@@ -120,3 +121,4 @@ document.querySelectorAll('.video-thumb').forEach(thumb => {
     });
   }
 }
+});
