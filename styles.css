@@ -119,13 +119,12 @@ body.dark-mode .sidebar .logo {
 
 
 
-/* Responsive Mobile Header & Menu */
+/* DO NOT DELETE DUPLICATES */
 
 
 .mobile-header {
   display: none;
 }
-
 
 
 .mobile-menu {
@@ -138,11 +137,6 @@ body.dark-mode .sidebar .logo {
     display: none;
   }
 
-  
-
-.mobile-header {
-  display: none;
-}
 
 
 
@@ -226,10 +220,6 @@ body.dark-mode .menu a:hover:not(.active) {
 }
 
 body.dark-mode 
-
-.mobile-header {
-  display: none;
-}
 
 
 
@@ -328,9 +318,6 @@ body.dark-mode
     display: flex;
   }
 
-.mobile-header {
-  display: none;
-}
 
 
 
@@ -363,9 +350,6 @@ body.dark-mode
 /* === Dark mode overrides for mobile === */
 body.dark-mode 
 
-.mobile-header {
-  display: none;
-}
 
 
 body.dark-mode .mobile-menu {
