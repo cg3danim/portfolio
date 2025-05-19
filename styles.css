@@ -119,17 +119,14 @@ body.dark-mode .sidebar .logo {
 
 
 
-/* DO NOT DELETE DUPLICATES */
 
-
-.mobile-header {
-  display: none;
+@media (max-width: 1024px) {
+  .mobile-header {
+    display: flex;
+    ...
+  }
 }
 
-
-.mobile-menu {
-  display: none;
-}
 
 /* Responsive Behavior */
 @media (max-width: 1024px) {
