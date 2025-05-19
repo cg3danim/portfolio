@@ -175,9 +175,6 @@ body.dark-mode .menu a:hover:not(.active) {
   color: #f90;
 }
 
-body.dark-mode 
-
-
 
 /* Dark mode logo in mobile header */
 body.dark-mode 
@@ -285,7 +282,7 @@ body.dark-mode
 }
 
 /* === Dark mode overrides for mobile === */
-body.dark-mode 
+
 
 
 
