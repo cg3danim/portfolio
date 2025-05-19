@@ -1,7 +1,7 @@
 // === CREDITS PAGE MODAL INTERACTION ===
 const modal = document.getElementById('credit-description');
 const creditText = document.getElementById('credit-text');
-const closeBtn = document.querySelector('.close-btn');
+const closeBtn = document.querySelector('#credit-description .close-btn');
 
 // Close modal and reset UI
 function closeModal() {
@@ -13,6 +13,7 @@ function closeModal() {
 // Open modal and update description
 function openModal(description) {
   creditText.textContent = description || 'No description available.';
+  console.log('🔍 Modal before show:', modal, modal.classList);
   modal.classList.remove('hidden');
   document.body.classList.add('modal-active'); // Darken sidebar
 }
