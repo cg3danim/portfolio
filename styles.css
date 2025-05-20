@@ -240,7 +240,7 @@ body.dark-mode .mobile-menu {
 /* Dark mode logo in mobile header */
 body.dark-mode 
 .mobile-header .logo {
-  width: 50px;
+  width: 70px;
   height: auto;
 }
 
@@ -382,7 +382,7 @@ body.dark-mode .mobile-menu a {
     align-items: center;
     background: #FAF7F0;
     color: #000;
-    height: 80px;
+    height: 50px;  /* barra mobile */
     padding: 0 0.75rem;
     position: fixed;
     top: 0;
@@ -397,7 +397,7 @@ body.dark-mode .mobile-menu a {
   }
 
   .hamburger {
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     line-height: 1;
   }
