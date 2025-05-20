@@ -21,6 +21,8 @@ html, body {
   scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* Sidebar */
@@ -148,7 +150,7 @@ body.dark-mode .sidebar .logo {
 
   
 .mobile-header .logo {
-  width: 70px;
+  width: 60px;
   height: auto;
 }
 
@@ -240,7 +242,7 @@ body.dark-mode .mobile-menu {
 /* Dark mode logo in mobile header */
 body.dark-mode 
 .mobile-header .logo {
-  width: 70px;
+  width: 60px;
   height: auto;
 }
 
@@ -336,7 +338,7 @@ body.dark-mode
 
   
 .mobile-header .logo {
-  width: 70px;
+  width: 60px;
   height: auto;
 }
 
@@ -392,7 +394,7 @@ body.dark-mode .mobile-menu a {
   }
 
   .mobile-header .logo {
-    width: 70px;
+    width: 60px;
     height: auto;
   }
 
@@ -531,6 +533,8 @@ body.dark-mode .modal .close-btn {
   margin: 0 auto;
   padding: 0;
   text-align: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 html, body {
   height: 100%;
