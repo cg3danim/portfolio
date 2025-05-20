@@ -681,5 +681,21 @@ body:not(.dark-mode) .sidebar .site-footer {
     transition: all 0.3s ease;
     box-sizing: border-box;
   }
+}
 
+@media (max-width: 1024px) {
+  .mobile-footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #444;  /* soft gray for light mode */
+    opacity: 0.7;
+    margin-top: 5rem;
+    padding-bottom: 1rem;
+  }
+}
+  body.dark-mode .mobile-footer {
+    color: #bbb;  /* soft gray for dark mode */
+    opacity: 0.7;
+  }
+}
 
