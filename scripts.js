@@ -11,7 +11,13 @@ function setDarkMode(enabled) {
     localStorage.setItem('darkMode', 'disabled');
   }
 }
-
+const toggleBtnMobile = document.getElementById('darkModeToggleMobile');
+if (toggleBtnMobile) {
+  toggleBtnMobile.addEventListener('click', () => {
+    const isDark = document.body.classList.contains('dark-mode');
+    setDarkMode(!isDark);
+  });
+}
 // Apply saved mode on load
 if (localStorage.getItem('darkMode') === 'enabled') {
   setDarkMode(true);

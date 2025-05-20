@@ -382,7 +382,7 @@ body.dark-mode .mobile-menu a {
     align-items: center;
     background: #FAF7F0;
     color: #000;
-    height: 40px;
+    height: 80px;
     padding: 0 0.75rem;
     position: fixed;
     top: 0;
@@ -397,7 +397,7 @@ body.dark-mode .mobile-menu a {
   }
 
   .hamburger {
-    font-size: 1rem;
+    font-size: 2rem;
     cursor: pointer;
     line-height: 1;
   }
@@ -637,3 +637,45 @@ body:not(.dark-mode) .sidebar .site-footer {
     display: block;
   }
 }
+
+
+
+  .dark-mode-btn:hover {
+    background-color: #f90;
+    color: #121212;
+    border-color: #f90;
+  }
+
+  body.dark-mode .dark-mode-btn {
+    background-color: transparent;
+    border: 1px solid #555;;
+    color: #555;
+    margin-top: 0rem; /* increase this to move it further down */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body.dark-mode .dark-mode-btn:hover {
+    background-color: #f90;
+    color: #121212;
+    border-color: #555;
+  }
+}
+@media (max-width: 1024px) {
+  .dark-mode-btn {
+    display: block;
+    margin: 2rem auto 1rem;  /* top, horizontal auto, bottom */
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: normal;
+    background-color: transparent;
+    border: 1px solid #555;
+    color: #555;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+
+
