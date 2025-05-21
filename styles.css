@@ -142,9 +142,7 @@ body.dark-mode .sidebar .logo {
 
   
 
-.mobile-header {
-  display: none;
-}
+/* .mobile-header { display: none; } /* Removed, canonical at line 106 */
 
 
 
@@ -169,8 +167,8 @@ body.dark-mode .sidebar .logo {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #121212; background: #FAF7F0;
-    color: white;
+    background: #FAF7F0; /* Corrected: Light mode default */
+    color: #000; /* Default text color for light mode */
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -227,24 +225,16 @@ body.dark-mode .menu a:hover:not(.active) {
   color: #f90;
 }
 
-body.dark-mode 
-
-.mobile-header {
-  display: none;
-}
+/* body.dark-mode .mobile-header { display: none; } /* Removed, this was causing conflicts */
 
 
 
 body.dark-mode .mobile-menu {
-  background: #1f1f1f; background: #FAF7F0;
+  background: #1f1f1f; /* Corrected: Dark mode background */
 }
 
 /* Dark mode logo in mobile header */
-body.dark-mode 
-.mobile-header .logo {
-  width: 60px;
-  height: auto;
-}
+/* body.dark-mode .mobile-header .logo rule exists in the media query below */
 
 
 
@@ -312,13 +302,13 @@ body.dark-mode
     left: 0;
     right: 0;
     bottom: 0;
-    display: none;
+    display: none; /* Default hidden */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     z-index: 2000;
-    background: inherit; /* ← retain light/dark mode background */
+    /* background: inherit; /* This was causing issues, specific BGs are set for light/dark */
     text-align: center;
     width: 100vw;
     height: 100vh;
@@ -330,9 +320,7 @@ body.dark-mode
     display: flex;
   }
 
-.mobile-header {
-  display: none;
-}
+/* .mobile-header { display: none; } /* Removed, canonical at line 106 */
 
 
 
@@ -357,24 +345,20 @@ body.dark-mode
   .mobile-menu a {
     text-decoration: none;
     font-family: 'Karla', sans-serif;
-    color: #000;
+    color: #000; /* Text color for light mode */
     font-size: 1.1rem;
   }
 }
 
 /* === Dark mode overrides for mobile === */
-body.dark-mode 
-
-.mobile-header {
-  display: none;
-}
+/* body.dark-mode .mobile-header rule already exists and is handled elsewhere or removed if redundant */
 
 
 body.dark-mode .mobile-menu {
-  background: #1f1f1f;
+  background: #1f1f1f; /* Ensure dark mode background is explicitly set */
 }
 body.dark-mode .mobile-menu a {
-  color: #f0f0f0;
+  color: #f0f0f0; /* Text color for dark mode */
 }
 
 @media (max-width: 1024px) {
@@ -422,17 +406,17 @@ body.dark-mode .hamburger {
 
 @media (max-width: 1024px) {
   body.dark-mode .mobile-header {
-    display: flex !important;
+    display: flex; /* Removed !important */
   }
 
   body.dark-mode .mobile-header .logo {
     filter: invert(1) brightness(1.2);
-    display: inline !important;
+    /* display: inline !important; Removed */
   }
 
   body.dark-mode .hamburger {
     color: #f0f0f0;
-    display: inline !important;
+    /* display: inline !important; Removed */
   }
 }
 
@@ -602,20 +586,18 @@ body.dark-mode textarea::placeholder {
 
 
 
-.sidebar {
-  position: relative;
-}
-
 .sidebar .site-footer {
-  position: absolute;
-  bottom: 1rem;
+  /* position: absolute; /* Removed */
+  /* bottom: 1rem; /* Removed */
   width: 100%;
   text-align: center;
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.5); /* Default light mode footer color */
+  margin-bottom: 1rem; /* Added to give some spacing from the bottom */
 }
-body:not(.dark-mode) .sidebar .site-footer {
-  color: rgba(0, 0, 0, 0.5);
+
+body.dark-mode .sidebar .site-footer {
+  color: rgba(255, 255, 255, 0.6); /* Dark mode footer color */
 }
 
 .social-icon {
