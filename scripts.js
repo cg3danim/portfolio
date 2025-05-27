@@ -46,8 +46,6 @@ if (hamburger && mobileMenu && closeMobileMenu) {
 // === Resize logic: Show/hide based on screen size
 function handleResize() {
   const isMobile = window.innerWidth <= 1024;
-  document.querySelector('.sidebar')?.classList.toggle('hidden', isMobile);
-  document.querySelector('.mobile-header')?.classList.toggle('hidden', !isMobile);
   
   // Only hide mobile menu manually if it's open
   if (!isMobile) {
