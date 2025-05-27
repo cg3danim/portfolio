@@ -749,3 +749,14 @@ body.dark-mode .styled-email-link:hover {
     border: none; /* Remove default iframe border */
 }
 
+/* === About Page (now index.html) Specific Content Styling === */
+.full-section.about .section-content-wrapper.centered {
+    max-width: 750px; /* Increased from 500px */
+    padding-left: 1rem; /* Increased for a bit more space */
+    padding-right: 1rem; /* Increased for a bit more space */
+}
+
+.full-section.about .section-content-wrapper.centered p {
+    text-align: left; 
+}
+
