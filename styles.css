@@ -708,7 +708,7 @@ body.dark-mode .styled-email-link {
 }
 
 body.dark-mode .styled-email-link:hover {
-  color: #121212;
+  color: #FFFFFF; /* Changed to white */
   background-color: #f90;
   border-color: #f90; 
 }
