@@ -52,7 +52,7 @@ html, body {
 }
 
 .sidebar .logo {
-  width: 250px;
+  width: 150px;
   margin-top: 4rem;
   margin-bottom: 2rem;
   transition: filter 0.3s ease, transform 0.3s ease;
@@ -148,7 +148,7 @@ body.dark-mode .sidebar .logo {
 
   
 .mobile-header .logo {
-  width: 60px;
+  width: 40px;
   height: auto;
 }
 
@@ -326,7 +326,7 @@ body.dark-mode .mobile-menu {
 
   
 .mobile-header .logo {
-  width: 60px;
+  width: 40px;
   height: auto;
 }
 
@@ -378,7 +378,7 @@ body.dark-mode .mobile-menu a {
   }
 
   .mobile-header .logo {
-    width: 60px;
+    width: 40px;
     height: auto;
   }
 
