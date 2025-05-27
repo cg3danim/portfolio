@@ -681,3 +681,71 @@ body.dark-mode .sidebar .site-footer {
   }
 }
 
+/* === Styled Email Link === */
+.styled-email-link {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem; 
+  border: 1px solid #555;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: inline-block; 
+  margin-top: 1rem;
+  color: #555;
+  background-color: transparent;
+  text-align: center;
+}
+
+.styled-email-link:hover {
+  color: #121212;
+  background-color: #f90;
+  border-color: #f90;
+}
+
+body.dark-mode .styled-email-link {
+  color: #555; 
+  border-color: #555;
+}
+
+body.dark-mode .styled-email-link:hover {
+  color: #121212;
+  background-color: #f90;
+  border-color: #f90; 
+}
+
+/* Specific for desktop sidebar if needed for centering, 
+   but sidebar's align-items: center should handle it */
+.desktop-email-link {
+  /* align-self: center; /* If sidebar is flex container with align-items */
+  /* display: block; /* Alternative for auto margins if not flex child */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+}
+
+/* Specific for mobile menu if needed, 
+   but mobile menu's align-items: center should handle it */
+.mobile-email-link {
+  /* align-self: center; /* If mobile menu is flex container with align-items */
+}
+
+/* === YouTube Responsive Video Container === */
+.video-responsive-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (div height / div width) */
+    margin-top: 2rem; /* Add some space above the video */
+    margin-bottom: 2rem; /* Add some space below the video */
+}
+
+.video-responsive-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove default iframe border */
+}
+
