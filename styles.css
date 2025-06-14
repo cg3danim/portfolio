@@ -59,7 +59,7 @@ html, body {
 }
 
 body.dark-mode .sidebar .logo {
-  filter: invert(1) brightness(1.2);
+  filter: invert(1) brightness(.6);
 }
 
 .menu {
@@ -395,7 +395,7 @@ body.dark-mode .mobile-header {
 }
 
 body.dark-mode .mobile-header .logo {
-  filter: invert(1) brightness(1.2);
+  filter: invert(1) brightness(.6);
 }
 
 /* Ensure hamburger icon is visible in dark mode */
@@ -410,7 +410,7 @@ body.dark-mode .hamburger {
   }
 
   body.dark-mode .mobile-header .logo {
-    filter: invert(1) brightness(1.2);
+    filter: invert(1) brightness(.6);
     /* display: inline !important; Removed */
   }
 
