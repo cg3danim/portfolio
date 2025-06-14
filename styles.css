@@ -52,14 +52,14 @@ html, body {
 }
 
 .sidebar .logo {
-  width: 150px;
+  width: 250px;
   margin-top: 4rem;
   margin-bottom: 2rem;
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 body.dark-mode .sidebar .logo {
-  filter: invert(1) brightness(.6);
+  filter: invert(1) brightness(1.2);
 }
 
 .menu {
@@ -148,7 +148,7 @@ body.dark-mode .sidebar .logo {
 
   
 .mobile-header .logo {
-  width: 40px;
+  width: 60px;
   height: auto;
 }
 
@@ -326,7 +326,7 @@ body.dark-mode .mobile-menu {
 
   
 .mobile-header .logo {
-  width: 40px;
+  width: 60px;
   height: auto;
 }
 
@@ -378,7 +378,7 @@ body.dark-mode .mobile-menu a {
   }
 
   .mobile-header .logo {
-    width: 40px;
+    width: 60px;
     height: auto;
   }
 
@@ -395,7 +395,7 @@ body.dark-mode .mobile-header {
 }
 
 body.dark-mode .mobile-header .logo {
-  filter: invert(1) brightness(.6);
+  filter: invert(1) brightness(1.2);
 }
 
 /* Ensure hamburger icon is visible in dark mode */
@@ -410,7 +410,7 @@ body.dark-mode .hamburger {
   }
 
   body.dark-mode .mobile-header .logo {
-    filter: invert(1) brightness(.6);
+    filter: invert(1) brightness(1.2);
     /* display: inline !important; Removed */
   }
 
@@ -685,11 +685,11 @@ body.dark-mode .sidebar .site-footer {
 .styled-email-link {
   text-decoration: none;
   padding: 0.5rem 1rem;
-  font-size: 0.9rem; 
+  font-size: 0.9rem;
   border: 1px solid #555;
   border-radius: 4px;
   transition: all 0.3s ease;
-  display: inline-block; 
+  display: inline-block;
   margin-top: 1rem;
   color: #555;
   background-color: transparent;
@@ -703,17 +703,17 @@ body.dark-mode .sidebar .site-footer {
 }
 
 body.dark-mode .styled-email-link {
-  color: #555; 
+  color: #555;
   border-color: #555;
 }
 
 body.dark-mode .styled-email-link:hover {
   color: #FFFFFF; /* Changed to white */
   background-color: #f90;
-  border-color: #f90; 
+  border-color: #f90;
 }
 
-/* Specific for desktop sidebar if needed for centering, 
+/* Specific for desktop sidebar if needed for centering,
    but sidebar's align-items: center should handle it */
 .desktop-email-link {
   /* align-self: center; /* If sidebar is flex container with align-items */
@@ -722,7 +722,7 @@ body.dark-mode .styled-email-link:hover {
   /* margin-right: auto; */
 }
 
-/* Specific for mobile menu if needed, 
+/* Specific for mobile menu if needed,
    but mobile menu's align-items: center should handle it */
 .mobile-email-link {
   /* align-self: center; /* If mobile menu is flex container with align-items */
@@ -757,6 +757,11 @@ body.dark-mode .styled-email-link:hover {
 }
 
 .full-section.about .section-content-wrapper.centered p {
-    text-align: justify; 
+    text-align: left;
 }
 
+/* === Credits Page Modal Description Text Styling === */
+#credit-text {
+    white-space: pre-line; /* Preserve newlines, collapse spaces */
+    text-align: left;    /* Override parent's text-align: center */
+}
