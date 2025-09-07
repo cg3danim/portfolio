@@ -749,3 +749,24 @@ body.dark-mode .styled-email-link:hover {
     border: none; /* Remove default iframe border */
 }
 
+.cv-icon-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #555;
+}
+
+.cv-icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.cv-icon-link:hover .cv-icon {
+  transform: scale(1.1);
+}
+
+body.dark-mode .cv-icon-link {
+  color: #bbb;
+}
