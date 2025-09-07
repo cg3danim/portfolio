@@ -753,13 +753,11 @@ body.dark-mode .styled-email-link:hover {
   display: block;
   text-align: center;
   margin-top: 1rem;
-  color: #555;
 }
 
 .cv-icon {
   width: 24px;
   height: 24px;
-  stroke: currentColor;
   transition: transform 0.2s ease;
 }
 
@@ -767,6 +765,6 @@ body.dark-mode .styled-email-link:hover {
   transform: scale(1.1);
 }
 
-body.dark-mode .cv-icon-link {
-  color: #bbb;
+body.dark-mode .cv-icon {
+  filter: invert(1);
 }
