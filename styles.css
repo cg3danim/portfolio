@@ -148,7 +148,7 @@ body.dark-mode .sidebar .logo {
 
   
 .mobile-header .logo {
-  width: 60px;
+  width: 50px;
   height: auto;
 }
 
@@ -395,7 +395,7 @@ body.dark-mode .mobile-header {
 }
 
 body.dark-mode .mobile-header .logo {
-  filter: invert(1) brightness(1.2);
+  filter: invert(0) brightness(1);
 }
 
 /* Ensure hamburger icon is visible in dark mode */
@@ -410,7 +410,7 @@ body.dark-mode .hamburger {
   }
 
   body.dark-mode .mobile-header .logo {
-    filter: invert(1) brightness(1.2);
+    filter: invert(0) brightness(1);
     /* display: inline !important; Removed */
   }
 
