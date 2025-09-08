@@ -685,11 +685,11 @@ body.dark-mode .sidebar .site-footer {
 .styled-email-link {
   text-decoration: none;
   padding: 0.5rem 1rem;
-  font-size: 0.9rem; 
+  font-size: 0.9rem;
   border: 1px solid #555;
   border-radius: 4px;
   transition: all 0.3s ease;
-  display: inline-block; 
+  display: inline-block;
   margin-top: 1rem;
   color: #555;
   background-color: transparent;
@@ -703,17 +703,17 @@ body.dark-mode .sidebar .site-footer {
 }
 
 body.dark-mode .styled-email-link {
-  color: #555; 
+  color: #555;
   border-color: #555;
 }
 
 body.dark-mode .styled-email-link:hover {
-  color: #121212;
+  color: #FFFFFF; /* Changed to white */
   background-color: #f90;
-  border-color: #f90; 
+  border-color: #f90;
 }
 
-/* Specific for desktop sidebar if needed for centering, 
+/* Specific for desktop sidebar if needed for centering,
    but sidebar's align-items: center should handle it */
 .desktop-email-link {
   /* align-self: center; /* If sidebar is flex container with align-items */
@@ -722,7 +722,7 @@ body.dark-mode .styled-email-link:hover {
   /* margin-right: auto; */
 }
 
-/* Specific for mobile menu if needed, 
+/* Specific for mobile menu if needed,
    but mobile menu's align-items: center should handle it */
 .mobile-email-link {
   /* align-self: center; /* If mobile menu is flex container with align-items */
@@ -749,24 +749,24 @@ body.dark-mode .styled-email-link:hover {
     border: none; /* Remove default iframe border */
 }
 
-.cv-icon-link {
-  display: block;
-  text-align: center;
-  margin-top: 1rem;
-  color: #555;
+/* === About Page (now index.html) Specific Content Styling === */
+.full-section.about .section-content-wrapper.centered {
+    max-width: 750px; /* Increased from 500px */
+    padding-left: 1rem; /* Increased for a bit more space */
+    padding-right: 1rem; /* Increased for a bit more space */
 }
 
-.cv-icon {
-  width: 24px;
-  height: 24px;
-  stroke: currentColor;
-  transition: transform 0.2s ease;
+.full-section.about .section-content-wrapper.centered p {
+    text-align: left;
 }
 
-.cv-icon-link:hover .cv-icon {
-  transform: scale(1.1);
+/* === Credits Page Modal Description Text Styling === */
+#credit-text-container p { /* Changed selector */
+    white-space: pre-line; /* Preserve newlines, collapse spaces */
+    text-align: left;    /* Override parent's text-align: center */
+    margin-bottom: 1em;  /* Add margin between paragraphs */
 }
 
-body.dark-mode .cv-icon-link {
-  color: #bbb;
+#credit-text-container p:last-child {
+    margin-bottom: 0; /* Remove margin from the last paragraph */
 }

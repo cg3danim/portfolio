@@ -1,19 +1,36 @@
 // === CREDITS PAGE MODAL INTERACTION ===
 const modal = document.getElementById('credit-description');
-const creditText = document.getElementById('credit-text');
+const creditTextContainer = document.getElementById('credit-text-container'); // Changed from creditText
 const closeBtn = document.querySelector('.close-btn');
 
 // Close modal and reset UI
 function closeModal() {
   modal.classList.add('hidden');
   modal.classList.remove('active');
-  creditText.textContent = '';
+  if (creditTextContainer) creditTextContainer.innerHTML = ''; // Clear container
   document.body.classList.remove('modal-active'); // Remove dark sidebar
 }
 
 // Open modal and update description
 function openModal(description) {
-  creditText.textContent = description || 'No description available.';
+  if (!creditTextContainer) return; // Safety check
+
+  creditTextContainer.innerHTML = ''; // Clear previous content
+
+  if (description) {
+    const parts = description.split('\\n\\n'); // Split by double newline
+    parts.forEach(part => {
+      if (part.trim() === '') return; // Skip empty parts (e.g. if there are more than two newlines)
+      const p = document.createElement('p');
+      p.textContent = part.trim();
+      creditTextContainer.appendChild(p);
+    });
+  } else {
+    const p = document.createElement('p');
+    p.textContent = 'No description available.';
+    creditTextContainer.appendChild(p);
+  }
+
   modal.classList.remove('hidden');
   modal.classList.add('active');
   document.body.classList.add('modal-active'); // Darken sidebar

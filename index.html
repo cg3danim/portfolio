@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Personal Work</title>
+  <title>About</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
@@ -13,18 +13,16 @@
   <header class="mobile-header">
     <img src="assets/logo2.png" alt="Logo" class="logo" />
     <div id="hamburger" class="hamburger">☰</div>
-   
-    </header>
+  </header>
 
   <!-- === MOBILE MENU OVERLAY === -->
   <div id="mobileMenu" class="mobile-menu">
     <div class="close-btn" id="closeMobileMenu">&times;</div>
-    <a href="index.html">Personal Work</a>
+    <a href="personal_work.html">Personal Work</a>
     <a href="credits.html">Films & Games</a>
-    <a href="about.html">About</a>
+    <a href="index.html" class="active">About</a>
     <a href="tools.html">Tools</a>
     <a href="contact.html">Contact</a>
-
 <a href="https://www.linkedin.com/in/cgCarlos" target="_blank" class="linkedin-mobile social-icon-link" aria-label="LinkedIn Profile">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 -150 1000 1000" class="social-icon">
     <path fill="currentColor" d="M195 349v553H11V349h184zm12-171q0 41-29 68t-75 27h-1q-46 0-74-27T0 178t29-68 75-27 74 27 29 68zm650 407v317H674V606q0-59-23-92t-71-33q-35 0-58 19t-36 48q-6 17-6 45v309H296q1-223 1-361V376l-1-27h184v80h-1q11-18 23-31t31-29 49-24 64-9q95 0 153 63t58 186z"/>
@@ -44,7 +42,6 @@
 <div class="mobile-footer">
   © All Rights Reserved. Carlos Gomez.
 </div>
-
   </div>
 
   <div class="layout">
@@ -52,9 +49,9 @@
       <div class="sidebar-top">
         <img src="assets/logo2.png" alt="Logo" class="logo" />
         <nav class="menu">
-          <a href="index.html" class="active">Personal Work</a>
+          <a href="personal_work.html">Personal Work</a>
           <a href="credits.html">Films & Games</a>
-          <a href="about.html">About</a>
+          <a href="index.html" class="active">About</a>
           <a href="tools.html">Tools</a>
           <a href="contact.html">Contact</a>
         
@@ -85,29 +82,22 @@
     </aside>
 
     <main class="main-content">
-      <section id="work" class="full-section work">
-        <div class="section-content-wrapper left">
-          <div class="video-gallery">
-            <div class="video-thumb" data-src="assets/videos/shot1.mp4">
-              <video src="assets/videos/shot1.mp4" muted playsinline></video>
-            </div>
-            <div class="video-thumb" data-src="assets/videos/shot2.mp4">
-              <video src="assets/videos/shot2.mp4" muted playsinline></video>
-            </div>
-            <div class="video-thumb" data-src="assets/videos/shot3.mp4">
-              <video src="assets/videos/shot3.mp4" muted playsinline></video>
-            </div>
-            <div class="video-thumb" data-src="assets/videos/shot4.mp4">
-              <video src="assets/videos/shot4.mp4" muted playsinline></video>
-            </div>
-            <div class="video-thumb" data-src="assets/videos/shot5.mp4">
-              <video src="assets/videos/shot5.mp4" muted playsinline></video>
-            </div>
+      <section class="full-section about">
+        <div class="section-content-wrapper centered">
+          <div class="video-responsive-container">
+            <iframe
+                src="https://www.youtube.com/embed/dZF08BLKCp4?autoplay=1&mute=1&playsinline=1"
+                allowfullscreen
+                aria-label="YouTube video player">
+            </iframe>
           </div>
-        </div>
-        <div class="video-modal" id="videoModal">
-          <span class="close-modal" id="closeModal">×</span>
-          <video id="modalVideo" controls autoplay></video>
+          <p>3D animation’s never just been a job for me. It’s more like a long, ongoing experiment that started over a decade ago here in Colombia. I I began as a 3D Generalist, taking on whatever came my way and figuring things out on the go. That mix of roles ended up being a huge win. It made me flexible, quick to adapt, and solid when it comes to solving weird technical issues or just stepping in wherever needed.</p>
+
+          <p>Later on, I dove into the world of 3D Feature Animation, where I got to be part of my first movie. Wild ride, learned a ton, and saw firsthand how big stories come to life.</p>
+          
+          <p>Since then, it’s been a mix of cool projects shipped a game, worked on a feature, did some TV shows, and a bunch of commercials. Went from Animator to Senior, then Lead Animator, where I got to help shape full sequences and keep the team energy strong. Lately, I’ve been deep into Unreal Engine, trying to mix tech with that bold, punchy style that makes animation really land.</p>
+          
+          <p>When I’m not animating someone throwing a punch or freaking out, I’m probably out cycling to clear my head. And if movies come up, just a heads-up: I’ll probably go on about Interstellar. I’m always up for a fun creative challenge or just sharing ideas with people who love this stuff too.</p>
         </div>
       </section>
     </main>
