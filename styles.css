@@ -770,3 +770,33 @@ body.dark-mode .styled-email-link:hover {
 #credit-text-container p:last-child {
     margin-bottom: 0; /* Remove margin from the last paragraph */
 }
+
+/* CV Icon Styling */
+.cv-icon-link {
+  margin-top: 1rem;
+  display: block;
+}
+
+.cv-icon {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.cv-icon-link:hover .cv-icon {
+  transform: scale(1.1);
+}
+
+body.dark-mode .cv-icon {
+  filter: invert(1) brightness(1.2);
+}
+
+/* Highlighted Text Styling */
+.highlight {
+  font-weight: bold;
+}
+
+body.dark-mode .highlight {
+  color: #f90;
+  font-weight: normal;
+}

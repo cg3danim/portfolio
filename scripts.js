@@ -18,8 +18,8 @@ if (toggleBtnMobile) {
     setDarkMode(!isDark);
   });
 }
-// Apply saved mode on load
-if (localStorage.getItem('darkMode') === 'enabled') {
+// Apply saved mode on load, defaulting to dark mode
+if (localStorage.getItem('darkMode') !== 'disabled') {
   setDarkMode(true);
 }
 
