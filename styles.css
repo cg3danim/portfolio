@@ -38,11 +38,18 @@ html, body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;  /* ✅ fill screen on short pages, grow on tall ones */
+  min-height: 100vh;
   height: auto;
   position: sticky;
   top: 0;
   transition: all 0.3s ease;
+
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode override */
+body.dark-mode .sidebar {
+  border-right: 0px solid rgba(255, 255, 255, 0.25);
 }
 
 .sidebar-top {
