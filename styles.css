@@ -764,7 +764,7 @@ body.dark-mode .styled-email-link:hover {
 }
 
 .full-section.about .section-content-wrapper.centered p {
-    text-align: left;
+    text-align: justify;
 }
 
 /* === Credits Page Modal Description Text Styling === */
