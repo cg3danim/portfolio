@@ -36,7 +36,7 @@ html, body {
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
   height: auto;
@@ -95,7 +95,8 @@ body.dark-mode .sidebar .logo {
 }
 
 #darkModeToggle {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
@@ -594,17 +595,16 @@ body.dark-mode textarea::placeholder {
 
 
 .sidebar .site-footer {
-  /* position: absolute; /* Removed */
-  /* bottom: 1rem; /* Removed */
   width: 100%;
   text-align: center;
   font-size: 0.75rem;
-  color: rgba(0, 0, 0, 0.5); /* Default light mode footer color */
-  margin-bottom: 1rem; /* Added to give some spacing from the bottom */
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: auto;
+  margin-bottom: 1rem;
 }
 
 body.dark-mode .sidebar .site-footer {
-  color: rgba(255, 255, 255, 0.6); /* Dark mode footer color */
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .social-icon {
@@ -806,4 +806,30 @@ body.dark-mode .cv-icon {
 body.dark-mode .highlight {
   color: #f90;
   font-weight: normal;
+}
+
+.tool-download-link {
+  display: inline-block;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.tool-download-link:hover {
+  color: #000;
+  border-bottom-color: #000;
+}
+
+body.dark-mode .tool-download-link {
+  color: #bbb;
+}
+
+body.dark-mode .tool-download-link:hover {
+  color: #f90;
+  border-bottom-color: #f90;
 }

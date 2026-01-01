@@ -6,7 +6,228 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <style>
+    /* Tools Page Specific Styles */
+    .tools-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
 
+    .tools-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: .5rem;
+      font-weight: 700;
+    }
+
+    .tools-header img {
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .tools-list {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .tool-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .tool-item:last-child {
+      margin-bottom: 5rem;
+    }
+/*  */
+    .full-section.tools {
+      text-align: initial;
+    }
+    .full-section.tools .tool-content {
+      text-align: left;
+    }
+    .full-section.tools .tool-content h2 {
+      text-align: center;
+    }
+
+/*  */
+
+    /* Alternate layout - gif on right */
+    .tool-item.reverse {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .tool-item.reverse .tool-image {
+      order: 2;
+    }
+
+    .tool-item.reverse .tool-content {
+      order: 1;
+    }
+
+    .tool-image img {
+      width: 100%;
+      max-width: 252px;
+      height: auto;
+      border: 1px solid #000;
+      border-radius: 4px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tool-item .tool-image {
+      display: flex;
+      justify-content: center;
+    }
+
+    .tool-item.reverse .tool-image {
+      justify-content: center;
+    }
+
+    .tool-image img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    body.dark-mode .tool-image img {
+      border-color: #555;
+    }
+
+    body.dark-mode .tool-image img:hover {
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    }
+
+    .tool-content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+
+    .tool-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+    }
+
+    .tool-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tool-content ul li {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .tool-content ul li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    body.dark-mode .tool-content ul li:before {
+      color: #f90;
+    }
+
+    /* Extra Features Section */
+    .extra-features {
+      margin-top: 5rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    body.dark-mode .extra-features {
+      border-top-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .extra-features h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      font-weight: 700;
+    }
+
+    .extra-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .extra-item {
+      text-align: left;
+    }
+
+    .extra-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    body.dark-mode .extra-item h3 {
+      color: #f90;
+    }
+
+    .extra-item p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .tools-header h1 {
+        font-size: 2rem;
+      }
+
+      .tools-list {
+        padding: 0 1rem;
+      }
+
+      .tool-item,
+      .tool-item.reverse {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .tool-item.reverse .tool-image,
+      .tool-item.reverse .tool-content {
+        order: initial;
+      }
+
+      .tool-image img {
+        max-width: 100%;
+      }
+
+      .extra-features {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .extra-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .full-section.tools {
+        padding-top: 6rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -24,19 +245,19 @@
     <a href="index.html">About</a>
     <a href="tools.html" class="active">Tools</a>
     <a href="contact.html">Contact</a>
-<a href="https://www.linkedin.com/in/cgCarlos" target="_blank" class="linkedin-mobile social-icon-link" aria-label="LinkedIn Profile">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 -150 1000 1000" class="social-icon">
-    <path fill="currentColor" d="M195 349v553H11V349h184zm12-171q0 41-29 68t-75 27h-1q-46 0-74-27T0 178t29-68 75-27 74 27 29 68zm650 407v317H674V606q0-59-23-92t-71-33q-35 0-58 19t-36 48q-6 17-6 45v309H296q1-223 1-361V376l-1-27h184v80h-1q11-18 23-31t31-29 49-24 64-9q95 0 153 63t58 186z"/>
-</svg>
-</a>
-<a href="mailto:cg3danim@gmail.com" class="styled-email-link mobile-email-link">cg3danim@gmail.com</a>
-<button id="darkModeToggleMobile" class="dark-mode-btn">Toggle Dark Mode</button>
-<a href="assets/cv.pdf" target="_blank" class="cv-icon-link" aria-label="Download CV">
-  <img src="assets/cv.png" alt="CV Icon" class="cv-icon" />
-</a>
-<div class="mobile-footer">
-  © All Rights Reserved. Carlos Gomez.
-</div>
+    <a href="https://www.linkedin.com/in/cgCarlos" target="_blank" class="linkedin-mobile social-icon-link" aria-label="LinkedIn Profile">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 -150 1000 1000" class="social-icon">
+        <path fill="currentColor" d="M195 349v553H11V349h184zm12-171q0 41-29 68t-75 27h-1q-46 0-74-27T0 178t29-68 75-27 74 27 29 68zm650 407v317H674V606q0-59-23-92t-71-33q-35 0-58 19t-36 48q-6 17-6 45v309H296q1-223 1-361V376l-1-27h184v80h-1q11-18 23-31t31-29 49-24 64-9q95 0 153 63t58 186z"/>
+      </svg>
+    </a>
+    <a href="mailto:cg3danim@gmail.com" class="styled-email-link mobile-email-link">cg3danim@gmail.com</a>
+    <button id="darkModeToggleMobile" class="dark-mode-btn">Toggle Dark Mode</button>
+    <a href="assets/cv.pdf" target="_blank" class="cv-icon-link" aria-label="Download CV">
+      <img src="assets/cv.png" alt="CV Icon" class="cv-icon" />
+    </a>
+    <div class="mobile-footer">
+      © All Rights Reserved. Carlos Gomez.
+    </div>
   </div>
 
   <div class="layout">
@@ -49,39 +270,180 @@
           <a href="index.html">About</a>
           <a href="tools.html" class="active">Tools</a>
           <a href="contact.html">Contact</a>
-        
-<a href="https://www.linkedin.com/in/cgCarlos" target="_blank" class="linkedin-desktop social-icon-link" aria-label="LinkedIn Profile">
-  
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 -150 1000 1000" class="social-icon">
-  <path fill="currentColor" d="M195 349v553H11V349h184zm12-171q0 41-29 68t-75 27h-1q-46 0-74-27T0 178t29-68 75-27 74 27 29 68zm650 407v317H674V606q0-59-23-92t-71-33q-35 0-58 19t-36 48q-6 17-6 45v309H296q1-223 1-361V376l-1-27h184v80h-1q11-18 23-31t31-29 49-24 64-9q95 0 153 63t58 186z"/>
-</svg>
-
-</a>
-<a href="mailto:cg3danim@gmail.com" class="styled-email-link desktop-email-link">cg3danim@gmail.com</a>
-</nav>
+          <a href="https://www.linkedin.com/in/cgCarlos" target="_blank" class="linkedin-desktop social-icon-link" aria-label="LinkedIn Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 -150 1000 1000" class="social-icon">
+              <path fill="currentColor" d="M195 349v553H11V349h184zm12-171q0 41-29 68t-75 27h-1q-46 0-74-27T0 178t29-68 75-27 74 27 29 68zm650 407v317H674V606q0-59-23-92t-71-33q-35 0-58 19t-36 48q-6 17-6 45v309H296q1-223 1-361V376l-1-27h184v80h-1q11-18 23-31t31-29 49-24 64-9q95 0 153 63t58 186z"/>
+            </svg>
+          </a>
+          <a href="mailto:cg3danim@gmail.com" class="styled-email-link desktop-email-link">cg3danim@gmail.com</a>
+        </nav>
       </div>
       <button id="darkModeToggle">Toggle Dark Mode</button>
       <a href="assets/cv.pdf" target="_blank" class="cv-icon-link" aria-label="Download CV">
         <img src="assets/cv.png" alt="CV Icon" class="cv-icon" />
       </a>
-<footer class="site-footer">
-  <p>© All Rights Reserved. Carlos Gomez.</p>
-</footer>
-    
+      <footer class="site-footer">
+        <p>© All Rights Reserved. Carlos Gomez.</p>
+      </footer>
     </aside>
 
     <main class="main-content">
       <section class="full-section tools">
-        <div class="section-content-wrapper centered">
-          <h1>Tools</h1>
-          <p>Coming soon</p>
+        <div class="tools-header">
+          <h1>CG3DAnim Tool</h1>
+          <a href="PUT_YOUR_LINK_HERE" class="tool-download-link">Download link</a>
+          <img src="assets/jpgs/bar.jpg" alt="Tool Bar" />
+        </div>
+
+        <div class="tools-list">
+          <!-- Copy Local Relations - LEFT -->
+          <div class="tool-item">
+            <div class="tool-image">
+              <img src="assets/gifs/relations.gif" alt="Copy Local Relations Demo" />
+            </div>
+            <div class="tool-content">
+              <h2>Copy Local Relations</h2>
+              <p>Copies the local relation using the first selected object as the driver for the others.</p>
+              <ul>
+                <li>Right-click to toggle realtime drag.</li>
+                <li>Pairs with Paste/Context for quick transfers.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- World Space - RIGHT -->
+          <div class="tool-item reverse">
+            <div class="tool-image">
+              <img src="assets/gifs/worldSpace.gif" alt="World Space Demo" />
+            </div>
+            <div class="tool-content">
+              <h2>World Space</h2>
+              <p>Creates a world-space copy that frees a control from local rig space while keeping its motion intact.</p>
+              <ul>
+                <li>Ideal for walk cycles and similar loops.</li>
+                <li>Right-click for bake type and axis options.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Aim Space - LEFT -->
+          <div class="tool-item">
+            <div class="tool-image">
+              <img src="assets/gifs/aim.gif" alt="Aim Space Demo" />
+            </div>
+            <div class="tool-content">
+              <h2>Aim Space</h2>
+              <p>Creates an aim space that keeps orientation toward a dynamic point.</p>
+              <ul>
+                <li>Great for looks, aiming props, or look-at setups.</li>
+                <li>Pick the axis from the menu and choose your bake mode.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Motion Trail - RIGHT -->
+          <div class="tool-item reverse">
+            <div class="tool-image">
+              <img src="assets/gifs/motionPath.gif" alt="Motion Trail Demo" />
+            </div>
+            <div class="tool-content">
+              <h2>Motion Trail</h2>
+              <p>Generates a motion trail based on speed or frequency with adjustable thickness, color, and sensitivity.</p>
+              <ul>
+                <li>Right-click for trail styling and markers.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pivot Tool - LEFT -->
+          <div class="tool-item">
+            <div class="tool-image">
+              <img src="assets/gifs/pivot.gif" alt="Pivot Tool Demo" />
+            </div>
+            <div class="tool-content">
+              <h2>Pivot Tool</h2>
+              <p>Moves or rotates a temporary pivot on one or more controls without touching the rig.</p>
+              <ul>
+                <li>Stores the last pivot position per control.</li>
+                <li>Right-click to open the mode popup and reposition it.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Euler Filter - RIGHT -->
+          <div class="tool-item reverse">
+            <div class="tool-image">
+              <img src="assets/gifs/euler.gif" alt="Euler Filter Demo" />
+            </div>
+            <div class="tool-content">
+              <h2>Euler Filter</h2>
+              <p>Applies Euler filter helpers and lets you assign a custom hotkey.</p>
+              <ul>
+                <li>Right-click for channel and key range options.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bake Forward - LEFT (LAST) -->
+          <div class="tool-item">
+            <div class="tool-image">
+              <img src="assets/gifs/components.gif" alt="Bake Demo" />
+            </div>
+            <div class="tool-content">
+              <h2>Bake</h2>
+              <p>Bakes using the first selected object as the driver for the second (driven), works with components too.</p>
+              <ul>
+                <li>Select the driver first, then the driven.</li>
+                <li>Right-click for more options.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Extra Features Section -->
+        <div class="extra-features">
+          <h2>Extra Features</h2>
+          <div class="extra-grid">
+            <div class="extra-item">
+              <h3>Blend Neighbor</h3>
+              <p>Blends toward the previous or next value for the selected keys.</p>
+            </div>
+
+            <div class="extra-item">
+              <h3>Move Relative</h3>
+              <p>Moves relatively toward the previous or next value for the selected keys.</p>
+            </div>
+
+            <div class="extra-item">
+              <h3>Tween</h3>
+              <p>Interpolates between the previous and next keys.</p>
+            </div>
+
+            <div class="extra-item">
+              <h3>Blend Ease</h3>
+              <p>Blends toward the previous or next value with an ease-style falloff for the selected keys.</p>
+            </div>
+
+            <div class="extra-item">
+              <h3>Push / Pull</h3>
+              <p>Pushes or pulls the values toward the interpolation between the previous and next keys.</p>
+            </div>
+
+            <div class="extra-item">
+              <h3>Time Offset</h3>
+              <p>Offsets the curve left or right by adjusting the key values without moving them in time.</p>
+            </div>
+
+            <div class="extra-item">
+              <h3>Smooth / Rough</h3>
+              <p>Pulls adjacent keys closer together or farther apart. Smooth helps remove noise like mocap.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
   </div>
   <script src="scripts.js"></script>
-
-
 
 </body>
 </html>
